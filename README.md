@@ -33,6 +33,7 @@
 
 * Intern : techheim(클라우드 기반의 서비스 병원 PACS 자동점검 관리 시스템 개발): 2020.03 ~ 2020.06
 * [AWS 기반의 전시 정보 예약 관리 플랫폼](https://github.com/Altudy/chang-rok/tree/master/Project/pjt_reservation) : 시연영상과 세부내용 ppt로 제작.
+* [momentum 만들기](https://github.com/Altudy/chang-rok/tree/master/Project/pjt_vanillaJS_chrome_app)
 
 ### Contacts 📫
 
