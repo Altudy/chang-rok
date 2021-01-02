@@ -53,5 +53,64 @@
 
 # 3. float 해제
 ```
-* 
+* 부모요소 height 부여
+* 자식 요소가 고정된 높이 값을 가지며 부모 역시 고정된 높이 값을 가진 경우에만 사용 가능.
+
+* 부모의 요소의 float 속성
+* 자식 요소의 float을 해제하기 위해서 부모 요소에 의미 없는 float을 부여하는 방법은 좋지 않음.
+
+* overflow(visible 제외)를 이용한 해제
+* 부모 요소 안에 부모의 영역을 벗어나는 자식 콘텐츠가 있다면 그 내용의 일부가 보이지 않음.
+* 부모의 내용을 넘쳐나서 노출되는 콘텐츠는 없는지 확인.
+
+* 인접 형제요소의 clear 속성을 이용한 해제
+* clear 속성을 사용하기 위해서는 display:block이어야 함.
+* 아무런 의미가 없는 빈 태그를 이용해야 하기 때문에 시맨틱적인 요소에선 불필요한 요소가 생긴다는 단점.
+
+* 가상요소를 이용한 clear 속성을 이용한 해제(가장 많이 쓰임)
+* 부모 요소에 :after를 이용하여 자식 요소들 중 가장 마지막에 위치, 그 후에 블록 요소를 만들고 clear 해제.
+* 가상 요소는 content 요소가 필수임이 중요.
+```
+
+# 4. 레이아웃
+```
+* 레이아웃 제작은 모든 웹 사이트를 만드는 과정에서 가장 먼저 선행되어야 하는 작업.
+* 레이아웃 종류
+* 1단 레이아웃, 다단 레이아웃(2단,3단,...)
+* 고정(상, 하단 고정) 레이아웃
+```
+
+## 4-1. 1단 레이아웃 제작
+```
+* 웹에서 가장 기본이 되는 레이아웃이며 상단(header), 중단(contents), 하단(footer)의 구성.
+
+* html5를 이용하여 header,section,footer로 구성.
+* 레이아웃 관련 아이템들을 감싸기 위해 <div class="wrap">를 만들어 레이아웃 컨테이너의 역할을 하게함.
+* min-width, max-width 속성을 이용해 가로 길이가 800px~1200px 로 유동적인 사이트 구성.
+* margin: 0 auto; 를 이용하여 블록 요소 가운데 정렬.
+
+* layout_1.html,  layout_1.css
+```
+
+## 4-2-1. 다단 레이아웃 제작(float)
+```
+* 다단 레이아웃의 짜임새가 테이블과 비슷해서 <table> 태그를 이용하여 레이아웃을 만들었지만 웹 표준이 발표되면서 <table> 태그로 구성된 레이아웃을 제작하는 사이트는 찾기 힘듬.
+
+* 1단 레이아웃에 <div class="aside">를 추가하여 float:left 속성을 이용해 content와 aside 배치.
+* footer의 float을 해제하기 위해 content와 aside를 감싸는 <div class="container">에 가상요소를 이용한 clear 속성을 이용하여 해제.
+* content와 aside 사이의 구분선을 만들기 위해 aside에 가상요소를 이용해 position:absolute 와 top,right 속성을 이용해 구분선 배치.
+* header와 footer가 위아래 고정이면서 content와 aside 중 한군데만 길어질 때 구분선이 한쪽 영역에 종속되지 않도록 하기 위함.
+
+* 브라우저의 화면에 header, container, footer가 모두 나오게 하고 100%의 길이를 갖게 하기 위해 container에 min-height:100% 부여
+* container의 부모요소인 wrap,body,html에 height:100%를 줘야함.
+* 위의 상태라면 하단의 footer가 짤리므로 container의 위 아래에 padding: 100px 0; margin: -100px 0; box-sizing:border-box;를 주어
+하단의 footer까지 보이게 한다.
+```
+
+## 4-2-2. 다단 레이아웃 제작(table)
+```
+
+* container를 display:table, content와 aside를 display:table-cell 속성을 부여하여 테이블과 동일한 효과를 줌.
+* container의 가로길이를 부여한 상태에서 content의 가로길이를 부여하면 aside는 가로길이를 따로 지정 안해줘도됨.
+* content의 우측에 border 5px를 추가하고 그 만큼 width의 길이에서 뺌.
 ```
