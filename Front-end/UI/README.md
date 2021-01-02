@@ -105,6 +105,8 @@
 * container의 부모요소인 wrap,body,html에 height:100%를 줘야함.
 * 위의 상태라면 하단의 footer가 짤리므로 container의 위 아래에 padding: 100px 0; margin: -100px 0; box-sizing:border-box;를 주어
 하단의 footer까지 보이게 한다.
+
+* layout_2.html, layout_2.css
 ```
 
 ## 4-2-2. 다단 레이아웃 제작(table)
@@ -113,4 +115,28 @@
 * container를 display:table, content와 aside를 display:table-cell 속성을 부여하여 테이블과 동일한 효과를 줌.
 * container의 가로길이를 부여한 상태에서 content의 가로길이를 부여하면 aside는 가로길이를 따로 지정 안해줘도됨.
 * content의 우측에 border 5px를 추가하고 그 만큼 width의 길이에서 뺌.
+
+* layout_2_table.html,  layout_2_table.css
+```
+
+## 4-3-1. 고정 레이아웃(상단 고정)
+```
+* 1단 또는 2단 레이아웃의 형태에서 상단과 하단 또는 두 영역이 모두 컨텐츠의 높이나 내용에 상관없이 항상 노출이 되도록 하는 레이아웃.
+
+* header에 position:fixed 부여하고 top:0,left:0,right:0도 같이 부여.
+* footer를 끌어올리기 위해 container에 margin-top:-100px을 줌.
+* content가 보이게 하기 위해 padding-top: 200px를 줌.
+* 또 다른 방법으로 container에 padding-top: 200px; 를 주고 padding을 무시하기 위해 box-sizing: border-box 부여.
+
+* layout_fixed.html,  layout_fixed.css
+```
+
+## 4-3-2. 고정 레이아웃(하단 고정)
+```
+* header와 footer에 position:fixed를 부여.
+* container의 최소 높이값 설정(min-height:100%)
+* container 영역은 header와 footer 영역에 의해 각각 100px씩 보이고 있지 않으므로 padding: 100px 0;을 부여.
+* 그 후, box-sizing:border-box; 속성을 부여하여 높이값 100%에서 추가된 padding값을 포함할 수 있도록 해줌.
+
+* layout_fixed2.html, layout_fixed2.css
 ```
