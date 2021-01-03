@@ -197,3 +197,10 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 3-2. 그 외의 경우, 이전날의 dp배열이 0이 아닌 경우에 진행, (관리자가 있고 && 전날의 배치와 현재의 배치가 같을때) 현재dp+= 이전dp
 4. 각 연산 진행시  1000000007로 나눈 나머지 값을 저장하도록 연산 진행.
 ```
+
+**[3349. 최솟값으로 이동하기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWDTN0cKr1oDFAWD)**
+```
+1. 대각선을 이용할 수 있는지 없는지 경우를 나누어서 풀이
+2. 새로 이동할 좌표: nx,ny 기존 좌표: x,y 라고 한다면 (nx>x && ny<y) || (nx<x && ny>y) 인 경우 대각선을 이용하지 않음.
+3. 대각선을 이용하는 경우, 이용한 만큼 더해주고 각 좌표 차이(nx-x,ny-y)의 차이의 절댓값을 더해준다.
+```
