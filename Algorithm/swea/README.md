@@ -204,3 +204,11 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 2. 새로 이동할 좌표: nx,ny 기존 좌표: x,y 라고 한다면 (nx>x && ny<y) || (nx<x && ny>y) 인 경우 대각선을 이용하지 않음.
 3. 대각선을 이용하는 경우, 이용한 만큼 더해주고 각 좌표 차이(nx-x,ny-y)의 차이의 절댓값을 더해준다.
 ```
+
+**[3459. 승자 예측하기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWFPoj1qANoDFAV0&categoryId=AWFPoj1qANoDFAV0&categoryType=CODE)**
+```
+1. N=100일 때 Alice가 이기기 위해선 최소 51을 부르면 됨.(N/2+1)
+2. Bob은 Aclie가 51을 못부르게 하기 위해 24를 부르면 됨.(Bob으로서 가장 최선의 방법)(N/2-1)
+3. 위와 같은 방식으로 51 24 13 5 3 0..
+4. N==1이 되면 Bob의 승리, 그렇지 않다면 Alice의 승리.
+```
