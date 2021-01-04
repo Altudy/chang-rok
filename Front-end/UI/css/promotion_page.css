@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+ol{
+  list-style: none;
+}
+
+body,ol{
+  margin: 0;
+  padding: 0;
+}
+
+.wrap{
+  position: relative;
+  background: url(../img/promotion_img.png) no-repeat 0 0;
+  width: 1020px;
+  height: 650px;
+  margin: 0 auto;
+}
+
+.blind{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.link_point{
+  position: absolute;
+  bottom: 108px;
+  left: 109px;
+  width: 118px;
+  height: 20px;
+  /* opacity: 0.5;
+  background-color: red; */
+}
+
+.link_join{
+  position: absolute;
+  bottom: 7px;
+  left: 340px;
+  width: 340px;
+  height: 70px;
+  /* opacity: 0.5;
+  background-color: blue; */
+}
