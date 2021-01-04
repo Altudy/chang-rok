@@ -8,23 +8,52 @@
 위의 기능을 Javascript로 구현하였다.
 ```
 
-***1. js folder***
+# 1. js folder
 
+## 1) clock.js
 ```
-1. clock.js
+* new Date()를 통해 현재 시간를 얻고 시/분/초를 각각 구해 setInterval() 함수를 통해 새로고침 없이 반복적으로 현재 시간의 정보를 얻을 수 있다.
+```
 
-- new Date()를 통해 현재 시간를 얻고 시/분/초를 각각 구해 setInterval() 함수를 통해 새로고침 없이 반복적으로 현재 시간의 정보를 얻을 수 있다.
+## 2) greeting.js
+```
+* local Storage(key,value로 저장)로부터 value 값을 가져와서 user 정보가 있는지 없는지 확인한다.(loadName)
 
-2. greeting.js
+* user가 없다면 이름을 요청한다.(askForName)
 
-- local Storage(key,value로 저장)로부터 value 값을 가져와서 user 정보가 있는지 없는지 확인한다.(loadName)
+* form의 input이 showing으로 바뀜.
 
-- user가 없다면 이름을 요청한다.(askForName)
-
--- form의 input이 showing으로 바뀜.
-
---- submit시에는 화면 전체가 새로고침 되기 때문에 이를 막기 위해 event.preventDefault() 함수를 이용(handleSubmit)
+* submit시에는 화면 전체가 새로고침 되기 때문에 이를 막기 위해 event.preventDefault() 함수를 이용(handleSubmit)
     그 후 화면에 user의 이름을 나타내고(paintGreeting), local Storage에 user를 저장한다.(saveName)
     
-- user가 있다면 화면에 user의 이름을 나타낸다.(paintGreeting)
+* user가 있다면 화면에 user의 이름을 나타낸다.(paintGreeting)
+```
+
+## 2) todo.js
+```
+* input에 값을 입력후 submit 했을 때, 입력값이 todo list에 추가 된것을 확인.
+
+* submit시 화면 전체가 새로고침 되는 것을 막기 위해 event.preventDefault() 함수를 이용.
+
+* createElement와 appendChild 를 이용하여 입력한 값을 li에 추가하여 ul 밑에 붙임.
+
+* localStorage에 저장되어 있지 않을 상태기 때문에 화면을 새로고침하면 초기화됨.
+
+* localStorage에 저장하기 위해 toDos 배열을 만들고 배열 안에 Object 형식(text,id)으로 넣기 위해 toDoObj 선언.
+
+* saveToDos 함수를 통해 localStorage에 저장.(String으로 저장해야 하기 때문에 JSON.stringify 로 저장.)
+
+* localStorage에 item이 있다면 JSON.parse를 통해 String을 Object 형식으로 가져옴.
+
+* 그 후, forEach를 통해 paintToDo 함수를 반복 호출하여 화면에 list 추가.
+
+* x 버튼을 누르면 목록을 삭제 하기 위해 클릭시 이벤트 발생.
+
+* event.target.parentNode로 부모 노드를 찾고 removeChild로 li를 지움.
+
+* toDos 배열에는 삭제가 안됐기 때문에 filter함수를 통해 todo.id와 li.id가 같지 않으면 true를 리턴하여 거름.
+
+* filter를 통한 cleanToDos를 다시 toDos로 바꿈.(따라서 toDos를 const로 선언하면 안됨)
+
+* saveToDos 함수를 통해 localStorage에 저장.
 ```
