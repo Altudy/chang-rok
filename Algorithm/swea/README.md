@@ -218,3 +218,10 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 1. 입력을 받을 때 max값을 미리 계산 후, score[] 배열의 루프를 돌때 max에서 0까지 돌면서 check가 true면 그 값에 score값을 더한 것도 true로 바꿈.
 2. 그후 max값까지 check배열의 루프를 돌면서 true면 count센다.
 ```
+
+**[3812. 호중이의 큐브색칠](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWH0GF0aBNADFAVB)**
+```
+1. x,y,z 방향 각각 |x-A| , |y-B|, |z-C| 를 계산하여 배열에 저장.
+2. xy방향 계산. ans[(i+j)%n][0] += arr[x][i]*arr[y][j]
+3. xy방향 계산 한 것과 z 방향 배열을 2와 같은 방식으로 계산.
+```
