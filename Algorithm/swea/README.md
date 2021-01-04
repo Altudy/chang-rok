@@ -212,3 +212,9 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 3. 위와 같은 방식으로 51 24 13 5 3 0..
 4. N==1이 되면 Bob의 승리, 그렇지 않다면 Alice의 승리.
 ```
+
+**[3752. 가능한 시험 점수](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWHPkqBqAEsDFAUn)**
+```
+1. 입력을 받을 때 max값을 미리 계산 후, score[] 배열의 루프를 돌때 max에서 0까지 돌면서 check가 true면 그 값에 score값을 더한 것도 true로 바꿈.
+2. 그후 max값까지 check배열의 루프를 돌면서 true면 count센다.
+```
