@@ -18,6 +18,8 @@
     <br>
     <b>Project</b>: 진행한 Project</br>
     <br>
+    <b>기초지식정리</b>: 백엔드 관련 지식 정리</br>
+    <br>
   </em>
 </div>
 
