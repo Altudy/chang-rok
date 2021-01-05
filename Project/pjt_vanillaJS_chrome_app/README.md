@@ -4,6 +4,9 @@
 
 1. 시계기능 구현
 2. local storage를 이용해 사용자 정보를 입력해 나타내는 기능 구현
+3. 할 일 목록을 추가하여 리스트로 보이게 하는 기능 구현.
+4. background에 이미지를 넣고 @keyFrame을 이용해 animation 효과를 줌.
+5. weather API를 이용하여 날씨 정보를 얻어 보여주는 기능 구현.
 
 위의 기능을 Javascript로 구현하였다.
 ```
@@ -65,4 +68,10 @@
 * paintImage 함수의 인자로 randomNumber를 받아서 random img를 얻고 classList.add("bgImage")를 주어 클래스 부여.
 
 * css파일에 bgImage에 대한 css 부여.( z-index 값을 -1로 주어 이전에 작업한 항목들이 background위로 다 뜨게 함.
+```
+
+## 4) weather.js
+```
+* navigator API를 이용하여 위치정보(경도,위도)를 받아옴.
+* 가져오는데 성공할 시 위치 정보를 localStorage에 저장.
 ```
