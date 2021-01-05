@@ -74,4 +74,8 @@
 ```
 * navigator API를 이용하여 위치정보(경도,위도)를 받아옴.
 * 가져오는데 성공할 시 위치 정보를 localStorage에 저장.
+
+* localStorage에 위치 정보가 있다면 getWeather 함수 실행.
+* fetch를 통해 url에서 data를 얻어옴, then() 함수를 통해 fetch가 완료된 후에 함수가 실행되도록 함.
+* 최종적으로 response를 json으로 바꾼 후, temperature과 place를 얻어 화면에 표시.
 ```
