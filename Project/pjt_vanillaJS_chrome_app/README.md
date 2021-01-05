@@ -57,3 +57,12 @@
 
 * saveToDos 함수를 통해 localStorage에 저장.
 ```
+
+## 3) bg.js
+```
+* img folder에서 랜덤으로 img을 불러오기 위해 Math.floor과 Math.random 함수를 씀.
+
+* paintImage 함수의 인자로 randomNumber를 받아서 random img를 얻고 classList.add("bgImage")를 주어 클래스 부여.
+
+* css파일에 bgImage에 대한 css 부여.( z-index 값을 -1로 주어 이전에 작업한 항목들이 background위로 다 뜨게 함.
+```
