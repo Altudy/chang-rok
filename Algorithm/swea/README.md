@@ -225,3 +225,9 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 2. xy방향 계산. ans[(i+j)%n][0] += arr[x][i]*arr[y][j]
 3. xy방향 계산 한 것과 z 방향 배열을 2와 같은 방식으로 계산.
 ```
+
+**[4050. 재관이의 대량 할인](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWIseXoKEUcDFAWN&categoryId=AWIseXoKEUcDFAWN&categoryType=CODE)**
+```
+1. 3개씩 묶어서 가장 낮은 가격이 공짜이므로 내림차순 정렬을 한다.
+1-1. 그 후, 3개씩 묶으면 내림차순 정렬이므로 큰 값을 공짜로 할 수 있다.
+```
