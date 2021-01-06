@@ -157,6 +157,8 @@
 * 외곽선 겹침 현상을 해결하기 위해 형제 선택자를 이용하여 margin-left: -1px; 속성을 부여
 * active 클래스가 있는 메뉴 아이템은 위의 margin-left에 의해 우측의 border가 나타나지 않음.
 * 이러한 현상을 해결하기 위해 position:relative; 속성을 주어 z-index 값을 새로 주어 가장 상단에 위치하도록 함.
+
+* menu_1.html,  menu_1.css
 ```
 
 ## 5-2. 2단 메뉴
@@ -168,6 +170,8 @@
 * 서브 메뉴 구성시 position: absolute; 속성을 주어 최상위 부모를 기준으로 위치를 잡게 함.
 * 서브 메뉴 하단 라인은 텍스트를 span으로 감싸 가상선택자 속성을 사용하여 텍스트의 길이만큼 border가 하단에 생기도록 함.
 * 각 메인 메뉴마다 서브 메뉴가 있으므로 겹치지 않게 기본 display:none;로 설정하고 hover나 active시에만 보이도록 display:block; 속성을 줌.
+
+* menu_2.html,  menu_2.css
 ```
 
 ## 6. 탭
@@ -179,4 +183,37 @@
 * 텍스트 말줄임을 하기 위해 overflow: hidden; white-space: nowrap; text-overflow: ellipsis; 속성을 준다.
 * 패널 박스의 내용이 줄어도 최소 높이를 유지하기 위해 min-height 속성을 주고 padding과 border를 포함하여 높이를 유지하기 위헤
 box-sizing: border-box; 속성을 줌.
+
+* tab.html, tab.css
+```
+
+## 7. 이미지 목록
+```
+* 이미지 리스트 : 섬네일 리스트, 인터넷에서 작은 크기의 견본 이미지
+
+* main_wrap 부분에 float:left; 을 적용하여 블록요소를 좌측으로 이어 붙게 적용.(+ 그 후, 가상요소로 해제)
+* 섬네일 이미지는 nth-child(5n) 을 적용하여 5번째 이미지의 margin-right:0;을 주어 여백을 제거함.
+
+* 텍스트 말줄임을 위해 oerflow:hidden; text-overflow: ellipsis; white-space:nowrap; 속성을 준다.
+* 여러줄 말줄임의 경우는 조금 다름.
+* white-space:nowrap;은 사용하지 않음 + webkit 계열 브라우저의 여러줄 말줄임 적용을 위한 선언을 해야함.
+* display : -webkit-box(플렉스 박스 형태로 변환)
+* -webkit-box-orient: 플렉스 박스의 방향 설정
+* -webkit-line-clamp: 보여줄 줄 개수
+* height와 line-height를 반드시 선언 해주어야함.
+
+* 이미지 액자 효과
+* 이미지 위로 반투명 외곽선과 dimmed된 배경을 적용 위해 구조를 추가(가상 선택자를 사용하여 구조 추가)
+
+* img_list.html,  img_list.css, text.html,  text.css,   img_frame.html,   img_frame.css
+```
+
+## 7-1. 이미지 목록(실습)
+```
+* 이미지 사이에 형제 선택자를 이용하여 margin-left 부여.
+* img를 div로 감싸고 가상 선택자를 이용하여 이미지 액자 효과를 줌.
+* 이미지 내의 info가 img 내에 존재하기 위해 item_link 클래스에 position:relative 속성을 부여하고 info 클래스에 position:absolute 부여.
+* 텍스트 말줄임을 위해 oerflow:hidden; text-overflow: ellipsis; white-space:nowrap; 속성을 준다.
+
+* img_list_made.html,   img_list_made.css
 ```
