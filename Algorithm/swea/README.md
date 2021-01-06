@@ -231,3 +231,10 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 1. 3개씩 묶어서 가장 낮은 가격이 공짜이므로 내림차순 정렬을 한다.
 1-1. 그 후, 3개씩 묶으면 내림차순 정렬이므로 큰 값을 공짜로 할 수 있다.
 ```
+
+**[4111. 무선 단속 카메라](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWJHjcFqdyoDFAUH)**
+```
+1. 카메라의 좌표 차이를 구하기 위해 입력을 오름차순으로 정렬.
+2. 카메라의 각 좌표 차이를 오름차순으로 정렬.
+3. 수신기가 K대 일때, K-1 개의 구간을 뺄 수 있다. 따라서, 0부터 N-K 까지의 2의 좌표 차이 값들을 더한다.
+```
