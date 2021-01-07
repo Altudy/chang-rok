@@ -215,5 +215,12 @@ box-sizing: border-box; 속성을 줌.
 * 이미지 내의 info가 img 내에 존재하기 위해 item_link 클래스에 position:relative 속성을 부여하고 info 클래스에 position:absolute 부여.
 * 텍스트 말줄임을 위해 oerflow:hidden; text-overflow: ellipsis; white-space:nowrap; 속성을 준다.
 
+* 서브 리스트
+* 이미지 리스트는 float:left; 속성을 사용하여 블록요소를 좌측으로 이어붙임.
+* 부모 요소가 자식 요소의 높이를 인지할 수 있도록 가상 선택자를 이용하여 float 해제.
+* 말줄임 처리를 위해 고정 너비 값을 입력 후 text-overflow,overflow,white-space 사용.
+* 여러줄 말줄임 처리를 위해 webkit 계열 브라우저와 ie에서 적용될 수 있도록 각 브라우저를 위한 코드에 대해서도 알아봄.
+* 액자효과를 주기 위해 가상 선택자와 position을 이용하여 외곽선 노출.
+
 * img_list_made.html,   img_list_made.css
 ```
