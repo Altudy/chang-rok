@@ -18,8 +18,6 @@
     <br>
     <b>Project</b>: 진행한 Project</br>
     <br>
-    <b>기초지식정리</b>: 백엔드 관련 지식 정리</br>
-    <br>
   </em>
 </div>
 
@@ -31,11 +29,38 @@
 * "웹 UI 과정" 완료
 * Toeic Speaking 공부
 
-### Project & Experience⚡
+### Experience ⚡
 
 * Intern : techheim(클라우드 기반의 서비스 병원 PACS 자동점검 관리 시스템 개발): 2020.03 ~ 2020.06
-* [AWS 기반의 전시 정보 예약 관리 플랫폼](https://github.com/Altudy/chang-rok/tree/master/Project/pjt_reservation) : 시연영상과 세부내용 ppt로 제작.
-* [momentum 만들기](https://github.com/Altudy/chang-rok/tree/master/Project/pjt_vanillaJS_chrome_app)
+
+### Project 🖥
+
+#### AWS 기반의 전시 정보 예약 관리 플랫폼
+
+   ##### 주요기능
+
+    1. 로그인 페이지
+    2. 메인 페이지
+    3. 상세 페이지
+    4. 예매 페이지
+    5. 예매확인 페이지
+    6. 한줄평 페이지
+
+![졸작시연영상](https://user-images.githubusercontent.com/56072258/104018767-bb8ba900-51fd-11eb-922a-fbd13547a070.gif)
+
+(로그인을 마치고 메인 페이지로 이동하기 까지의 영상 입니다. [해당링크](https://github.com/Altudy/chang-rok/tree/master/Project/pjt_reservation)에서 
+전체 영상과 상세 내용을 볼 수 있습니다.)
+
+#### Google Chrome의 Momentum 만들기
+
+  ##### 주요기능
+  
+    1. 시계기능
+    2. 사용자 이름 입력
+    3. todo list 작성
+    4. 상단 오른쪽의 온도와 weather 기능
+    
+![momentum](https://user-images.githubusercontent.com/56072258/104020975-59cd3e00-5201-11eb-9bac-6a6deaf54ab7.gif)
 
 ### Contacts 📫
 
