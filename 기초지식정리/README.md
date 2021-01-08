@@ -382,13 +382,47 @@ $ kill -1
 * 하나의 자원은 JSON,XML,TEXT,RSS 등 여러 형태의 Representation으로 나타내어 질 수 있다.(JSON이나 XML이 일반적)
 
 2) JSON
+* 데이터를 저장하거나 전송할 떄 많이 사용되는 경량의 데이터 교환 형식
+* Javascript에서 객체를 만들 때 사용하는 표현식
+* 서버-클라이언트 간의 교류에서 일반적으로 많이 사용된다.
+* javascript를 이용하여 JSON 형식의 문서를 쉽게 javascript 객체로 변환할 수 있는 이점이 있다.
+* 다른 프로그래밍 언어를 이용해서도 쉽게 만들 수 있다. 
 
+* XML vs JSON
+* XML : 데이터 값 양쪽으로 태그가 있다.
+* JSON : 중괄호 형식, 값을 ','로 나열하기에 그 표현이 간단.
+
+* JSON 형식
+* name-value 형식의 쌍
+* 값들의 순서화된 리스트 형식
+
+* JSON의 문제점
+* AJAX는 단순히 데이터만이 아니라 Javascript 자체도 전달할 수 있다. 받은 데이터가 Javascript가 될 수도 있고 악성 스크립트가 될 수 있다.
+* 위와 같은 이유로 받은 내용에서 순수하게 데이터만 추출하기 위한 JSON 관련 라이브러리를 따로 사용.
+
+* JSON.parse() : JSON 형식의 텍스트를 자바스크립트 객체로 변환.
+* JSON.stringify() : 자바스크립트 객체를 JSON 텍스트로 변환.
 ```
 
 ### 5-1. 인증
 ```
 
 1) Oauth
+* 인증을 위한 오픈 스탠다드 프로토콜, 사용자가 A의 인터넷 서비스 기능을 다른 애플리케이션에서도 사용할 수 있게 한 것.
+* 로그인과 Oauth는 그 차이가 있다. 로그인이 사원증이라면, Oauth는 방문증으로 볼 수 있다.
+* 둘은 각각 인증 받은 권한이 다르다.
+
+* OpenID vs Oauth
+* OpenID의 주요 목적은 인증, Oauth의 주요 목적은 허가.
+* OpenID는 OpenID Provider에서 사용자의 인증 과정을 처리.
+* Oauth를 사용자 인증을 위한 방법으로 쓸 수 있지만 근본 목적이 중요.
+
+* 용어
+* user : service provider에 계정을 가지고 있으면서 consumer를 이용하려는 사용자
+* service provider : Oauth를 사용하는 open api를 제공하는 서비스
+* consumer : Oauth 인증을 사용해 service provider의 기능을 사용하려난 애플리케이션이나 웹 서비스
+* request token : consumer가 service provider에게 접근 권한을 인증받기 위해 사용하는 값, 인증이 완료된 후에는 access token으로 교환.
+* access token : 인증 후 consumer가 service provider의 자원에 접근하기 위한 키.
 
 2) 기본적인 인증
 
