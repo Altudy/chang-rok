@@ -229,3 +229,23 @@ box-sizing: border-box; 속성을 줌.
 
 * img_list_made.html,   img_list_made.css
 ```
+
+## 8. 표
+```
+* html에서 테이블 태그는 표를 만들때 사용. 레이아웃을 구성하기 위해 테이블 태그를 사용하는 일이 없도록 해야함.
+* 표로 만들어진 UI라도, 리스트 태그와 같이 다른 태그로 대체할 수 있다면 그렇게 하는 것이 좋다.
+
+* 표의 접근성
+* th에 scope 속성을 준다.(col,row,colgroup,rowgroup)
+* thead의 th는 scope가 col속성.
+* 복잡한 표의 경우 id와 headers 추가.
+* th에 모두 id추가, td에 headers추가(headers의 값으로는 id가 들어온다.) // 거의 쓰이지 않음.
+
+* 표에서의 position
+* 브라우저마다 결과가 다르므로 테이블은 각 요소를 배치하는 틀로 보고, 셀 안에 div를 추가하여 position 요소나 꾸미는 요소는 내부 div에 직접
+선언 하는 것이 좋다.
+
+* 테이블의 border
+* z-index의 차이 : th>td>tr>thead>tbody>col>table
+
+```
