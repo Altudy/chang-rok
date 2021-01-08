@@ -28,7 +28,7 @@ body{
   border-bottom: 1px solid #fff;
   color: #fff;
 }
-.input_name, .input_todo::placeholder{
+.input_name::placeholder, .input_todo::placeholder{
   color: #fff;
 }
 .js-toDoList{
