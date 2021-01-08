@@ -222,5 +222,10 @@ box-sizing: border-box; 속성을 줌.
 * 여러줄 말줄임 처리를 위해 webkit 계열 브라우저와 ie에서 적용될 수 있도록 각 브라우저를 위한 코드에 대해서도 알아봄.
 * 액자효과를 주기 위해 가상 선택자와 position을 이용하여 외곽선 노출.
 
+* 이미지 목록 추가 기능 제작
+* 기존의 info 클래스를 <div class="info_wrap">으로 감싸고, rank를 표시할 부분을 추가.
+* 가상선택자 before을 이용해서 background 속성으로 img를 넣어줌.(넣기 전 공간 확보를 위해 padding-left 진행)
+* sub_list 마우스 오버시에 나중에보기 img 보이도록 함. (img가 보일때 반투명일 경우 그 뒤의 time stamp가 보이므로 time은 안보이도록 해야함)
+
 * img_list_made.html,   img_list_made.css
 ```
