@@ -2,7 +2,7 @@
 
 ![header](https://capsule-render.vercel.app/api?type=wave&color=gradient&height=300&section=header&text=Rok's%20Github&fontSize=40)
 
-### Hello 😊;
+### Hello 😊
 
 <div>
   <em>
@@ -22,6 +22,14 @@
 </div>
 
 ![Rok's github stats](https://github-readme-stats.vercel.app/api?username=gksckdfhr98&show_icons=true)
+
+### Why Back-end? 🖥
+
+* ICT 학점연계 인턴십을 통해 웹을 처음 접했습니다. 제가 원하는 자료를 요청하고 데이터베이스에서 가져와 잘 꾸며진 UI와 짠 하고 보여주는 것이 신기했습니다.
+* 그리고 그 광경을 보니 제 머리 속에서 구상하고 있던 것들을 실제로 만들어 보고 싶은 욕구가 생겼습니다.
+* 그렇게 웹 공부를 시작하면서 Front-end와 Back-end로 나뉘는 것을 알았고 브라우저 화면에서 보이는 UI를 작성하는 것보다는 데이터베이스와의 비즈니스 로직을 작성하는 것에
+  매력을 느꼈습니다.
+* 그때부터 [백엔드 커리어](https://github.com/devJang/developer-roadmap)에 따라 공부를 진행하고 있습니다.
 
 ### Schedule 📓
 
@@ -61,6 +69,8 @@
     4. 상단 오른쪽의 온도와 weather 기능
     
 ![momentum](https://user-images.githubusercontent.com/56072258/104020975-59cd3e00-5201-11eb-9bac-6a6deaf54ab7.gif)
+
+momentum - [READEME.md](https://github.com/Altudy/chang-rok/tree/master/Project/pjt_vanillaJS_chrome_app)
 
 ### Contacts 📫
 
