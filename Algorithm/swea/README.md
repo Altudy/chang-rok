@@ -238,3 +238,8 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 2. 카메라의 각 좌표 차이를 오름차순으로 정렬.
 3. 수신기가 K대 일때, K-1 개의 구간을 뺄 수 있다. 따라서, 0부터 N-K 까지의 2의 좌표 차이 값들을 더한다.
 ```
+
+**[4259. 제곱수의 합 계산하기](https://swexpertacademy.com/main/code/problem/problemSolverCodeDetail.do)**
+```
+1. long long으로 입력을 받아서 두 수를 곱하기엔 999^9가 범위를 벗어나므로 string으로 입력을 받아 각 자리를 계산할때 int형으로 변환하여 계산하는 식으로 진행.
+```
