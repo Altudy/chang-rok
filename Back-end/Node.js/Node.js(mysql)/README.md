@@ -31,9 +31,29 @@
 공격의 의도가 있는 코드를 막아줌.
 * error 처리를 위해 throw error; (error 발생시 애플리케이션이 종료된다.)
 
-## mysql로 글생성 기능 구현
+## mysql로 글생성 기능 구현(create)
 
-* create 버튼 누를시 쿼리를 통해 database에 insert 되도록 한다.
+* create 버튼 누를 시 쿼리를 통해 database에 insert 되도록 한다.
 * 쿼리를 작성하고 사용자 입력을 받을 부분은 ?로 작성, 2번째 인자로 배열을 넣어 ?값을 대체할 값을 넣는다.
 * insert된 row의 id값은 콜백함수의 result의 insertId로 알 수 있다.
+
+## mysql로 글수정 기능 구현(update)
+
+* update 버튼 누를 시 목록을 가져오고(select * from topic), title과 description을 사용자 입력으로 받아(input tag) submit한다.
+* update_process에서 qs.parese(body)를 통해 id,title,description에 각각 접근 할 수 있게 한다.
+* 그 후 query를 통해 database에 update해준다.
+
+## mysql로 글삭제 기능 구현(delete)
+
+* delete 버튼 누를 시 delete_prcoess에서 쿼리를 통해 datebase의 id에 해당하는 row를 삭제한다.
+
+## join을 이용해서 상세보기 구현
+
+* 기존의 목록을 누르면 나오는 화면에 topic의 저자가 누구인지 보이게 하려고 한다.
+* left join 속성을 이용하여 기존의 쿼리문(select * from topic where id=?)을 새롭게 바꾼다. (select * from topic left join author on topic.author_id = author.id where topic.id=?)
+
+## join을 이용해서 글생성 구현
+
+* 기존의 create 기능을 업그레이드 한다.(database에서 author의 name을 불러와서 select, option 속성을 통해 사용자가 저자의 이름을 지정할 수 있게 한다.)
+* select tag의 name속성으로 submit이 값을 읽을 수 있음.
 
