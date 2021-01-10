@@ -71,4 +71,7 @@
 
 # 정리정돈 - topic
 
-* 
+* lib 폴더 밑에 topic.js 파일을 만들고 db의 topic table을 이용한 코드 부분을 따로 뺀다.
+* 기존 홈화면 부분을 topic.home(reuqest,response)로 바꾸고 topic.js에서 exports.home = function(request,response){}로 바꿈.
+* 위와 같은 방식으로 create,update,delete 진행.
+
