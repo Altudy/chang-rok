@@ -1,6 +1,6 @@
-[VanillaJS]
+# VanillaJS
 ```
-이 Project는 Momentum을 직접 구현한 프로젝트이다.
+이 Project는 Momentum을 직접 구현한 프로젝트입니다. (NomadCoder의 VanillaJs 수강)
 
 1. 시계기능 구현
 2. local storage를 이용해 사용자 정보를 입력해 나타내는 기능 구현
@@ -8,7 +8,21 @@
 4. background에 이미지를 넣고 @keyFrame을 이용해 animation 효과를 줌.
 5. weather API를 이용하여 날씨 정보를 얻어 보여주는 기능 구현.
 
-위의 기능을 Javascript로 구현하였다.
+위의 기능을 Javascript로 구현하였습니다.
+```
+
+# Why VanillaJs?
+```
+* Spring을 공부하면서 controller에서 비즈니스 로직처리를 통해 얻은 model을 view단으로 보내 jsp를 통해 브라우저로 보여주는 과정에서
+웹 프로그래밍 언어(html,css,javascript)실력의 부족을 느꼈습니다.
+* 머리 속으로 생각하는 것들을 간단하게라도 구현하기 위해 라이브러리를 쓰지 않는 javascript의 기본인 vanillaJs 공부를 택했습니다.
+```
+
+# Result
+```
+1) local Storage에 대해 처음 알게 되었습니다. key와 value 쌍으로 값을 저장하고 읽으면서 새로고침을 해도 그 값을 유지할 수 있습니다.
+2) background img를 넣는 과정에서 @keyframe 속성에 대해 지식의 부족함을 느꼈습니다. 그래서 네이버부스트코스의 웹 UI 과정을 수강하기 시작했습니다.
+3) openweathermap API를 이용하면서 data를 읽어오는 fetch 함수를 처음 접했습니다. 그 과정에서 javascript의 동기와 비동기 처리에 대한 부분을 기초지식 폴더에 정리했습니다.
 ```
 
 # 1. js folder
