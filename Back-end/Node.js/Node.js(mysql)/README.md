@@ -57,3 +57,18 @@
 * 기존의 create 기능을 업그레이드 한다.(database에서 author의 name을 불러와서 select, option 속성을 통해 사용자가 저자의 이름을 지정할 수 있게 한다.)
 * select tag의 name속성으로 submit이 값을 읽을 수 있음.
 
+# join을 이용해서 글수정 구현
+
+* 글수정시 저자의 이름도 나타나게 한다.(author_id에 따른 저자가 selected되게 한다.)
+* 기존의 template.js에서 Object template에 추가된 function authorSelect를 2번째 매개변수로 author_id를 받도록 수정한다.
+* tag에 option html코드를 더해 나갈 시 루프를 돌면서 author[i].id와 author_id가 같다면 selected 속성이 추가되도록 한다.
+
+# 정리정돈 - db
+
+* main.js의 코드의 가독성이 떨어지므로 main.js의 전체 파일에서 해당 로직들을 여러 js파일로 분리 작업 실행.
+* db접속에 해당하는 부분을 lib폴더 밑에 db.js에 넣음.(마지막에 module.exports = db)
+* 실제 버젼관리 시에는 db정보를 공유하면 안되므로 해당 값을 빈값으로 한 de.template.js로 버젼관리해서 공유하고 그걸 이용해서 db.js 파일을 만듬.
+
+# 정리정돈 - topic
+
+* 
