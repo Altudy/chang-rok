@@ -75,3 +75,33 @@
 * 기존 홈화면 부분을 topic.home(reuqest,response)로 바꾸고 topic.js에서 exports.home = function(request,response){}로 바꿈.
 * 위와 같은 방식으로 create,update,delete 진행.
 
+# 저자 목록 보기 기능의 구현
+
+* 메인 화면에 author page로 이동할 수 있는 <a> 태그를 만든다.
+* css table 속성을 이용해 database에서 author의 이름을 표 형식으로 출력한다.
+
+# 저자 생성 기능 구현
+
+* author page에 name과 description을 쓰고 제출할 수 있는 form 생성.
+* 제출시 name와 profile(description)이 database에 insert되고 /author 로 리다이렉트 됨.
+
+# 저자 수정 기능 구현
+
+* update 클릭시 create와 유사한 형태로 form 생성된다.
+* form의 input요소(name,profile)은 database에서 queryData.id를 통해 가져온 author[0]의 name과 profile을 보여준다.
+* 그 후, update 버튼 클릭 시 database에 update 된다.
+
+# 저자 삭제 기능 구현
+
+* delete 클릭시 database에서 author와 topic의 정보를 삭제한다.
+* topic table에서 author_id에 해당하는 row를 삭제 후, author table에서 해당 row를 삭제.
+
+# SQL Injection
+
+* 공격의 의도를 가진 sql 코드를 방어하는 법.
+* 사용자의 파라미터를 받는 부분에 sql코드를 넣어 공격할 수 있기 때문에 ?로 쓰고 그 뒤에 배열의 형태로 파라미터를 받는다.
+* 기본적으로 쿼리의 다중 수행은 막혔기 때문에 위와 같은 방법은 실행안됨.(하지만 ?로 파라미터 받는 방법으로 코드 작성)
+
+# escaping
+
+* 공격의 의도를 가진 자바스크립트 코드를 입력해서 웹 브라우저를 공격하는 Cross site scripting(XSS)를 sanitizehtml 모듈을 이용해서 방어.
