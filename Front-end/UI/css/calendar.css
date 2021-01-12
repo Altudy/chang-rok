@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+.blind{
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+table,th{
+  border: 1px solid #e1e1e1;
+}
+
+table{
+  width: 500px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 12px;
+}
+th{
+  height: 25px;
+  color: #777;
+}
+td{
+  border-top: 1px solid #e1e1e1;
+  border-left: 1px solid #e1e1e1;
+}
+.inner{
+  position: relative;
+  height: 70px;
+  padding: 5px;
+}
+
+.date{
+  font-weight: bold;
+}
+.text{
+  display: block;
+  margin-top: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-style: normal;
+}
+.date.dimmed{
+  color: #e7e7e7;
+}
+.date.holiday{
+  color: red;
+}
+.text.anniversary{
+  color: lightblue;
+}
+.text.holiday{
+  color: red;
+}
+.lunar{
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  font-size: 11px;
+  color: #bababa;
+}
+.today{
+  border: 1px solid #000;
+  background-color: yellow;
+}
