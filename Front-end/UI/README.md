@@ -257,3 +257,10 @@ box-sizing: border-box; 속성을 줌.
 
 * table.html, table.css
 ```
+
+## 8-2. 달력 만들기
+```
+* table 태그로 레이아웃을 잡고
+* 특정 td의 border에 색을 주면 right,bottom만 보임(table의 border-collapse: collapse 속성 때문)
+* 위의 문제를 해결하기 위해 td의 border를 top과 left만 준다.
+```
