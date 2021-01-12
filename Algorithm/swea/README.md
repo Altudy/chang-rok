@@ -250,3 +250,8 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 2. 미리 키패드의 문자열을 배열로 저장해 놓은 word 배열을 통해 if(word[해당숫자].find(사전의 문자) == string::npos) 면 return false.
 * 3중 포문이여서 시간 초과 뜰줄 알았는데, 이게 통과가 되네
 ```
+
+**[4301. 콩 많이 심기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWLv-yZah48DFAVV&categoryId=AWLv-yZah48DFAVV&categoryType=CODE)**
+```
+1. 2차원 배열 m을 true로 초기화한 후, 2중 루프를 돌면서 true인 m[i][j]에 거리가2인 위치들 false로 바꿔줌.
+```
