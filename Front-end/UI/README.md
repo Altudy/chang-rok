@@ -254,4 +254,6 @@ box-sizing: border-box; 속성을 줌.
 ```
 * caption 밑에 colgroup 속성을 넣을 시 col에 width,background,border style 밖에 적용이 안된다.
 * 이외의 요소들은 딱히 어려운 점이 없으므로 생략.
+
+* table.html, table.css
 ```
