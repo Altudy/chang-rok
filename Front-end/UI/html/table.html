@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>표 만들기</title>
+    <link rel="stylesheet" href="../css/table.css">
+  </head>
+  <body>
+    <table>
+      <caption>성별, 연령별 분포 목록</caption>
+      <colgroup>
+        <col span="2" class="col">
+        <col span="2">
+      </colgroup>
+      <thead>
+        <tr>
+          <th scope="col">연령별</th>
+          <th scope="col">성별</th>
+          <th scope="col" class="th-view">조회수</th>
+          <th scope="col" class="th-rate">비율</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="2" scope="rowgroup">전체</th>
+          <th scope="row" class="th-male">남</th>
+          <td>0</td>
+          <td>0.0%</td>
+        </tr>
+        <tr>
+          <th scope="row" class="th-female">여</th>
+          <td>0</td>
+          <td>0.0%</td>
+        </tr>
+        <tr>
+          <th rowspan="2" scope="rowgroup">0-12</th>
+          <th scope="row" class="th-male">남</th>
+          <td>0</td>
+          <td>0.0%</td>
+        </tr>
+        <tr>
+          <th scope="row" class="th-female">여</th>
+          <td>0</td>
+          <td>0.0%</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
