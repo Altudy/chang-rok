@@ -243,3 +243,10 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 ```
 1. long long으로 입력을 받아서 두 수를 곱하기엔 999^9가 범위를 벗어나므로 string으로 입력을 받아 각 자리를 계산할때 int형으로 변환하여 계산하는 식으로 진행.
 ```
+
+**[4261. 빠른 휴대전화 키패드](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWLL7kaaAPsDFAUW&categoryId=AWLL7kaaAPsDFAUW&categoryType=CODE)**
+```
+1. 사전을 입력 받을 때, S의 길이와 같지 않으면 1차적으로 거름.
+2. 미리 키패드의 문자열을 배열로 저장해 놓은 word 배열을 통해 if(word[해당숫자].find(사전의 문자) == string::npos) 면 return false.
+* 3중 포문이여서 시간 초과 뜰줄 알았는데, 이게 통과가 되네
+```
