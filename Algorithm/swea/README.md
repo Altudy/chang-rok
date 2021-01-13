@@ -255,3 +255,9 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 ```
 1. 2차원 배열 m을 true로 초기화한 후, 2중 루프를 돌면서 true인 m[i][j]에 거리가2인 위치들 false로 바꿔줌.
 ```
+
+**[4366. 정식이의 은행업무](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWMeRLz6kC0DFAXd&categoryId=AWMeRLz6kC0DFAXd&categoryType=CODE)**
+```
+1. 2진수로 만들 수 있는 모든 경우의 수를 만든후 vector에 저장.
+2. 3진수의 자릿수를 바꾸어 가면서 vector에 있는 수와 같은지 비교.
+```
