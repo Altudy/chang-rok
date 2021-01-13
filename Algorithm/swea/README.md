@@ -261,3 +261,12 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 1. 2진수로 만들 수 있는 모든 경우의 수를 만든후 vector에 저장.
 2. 3진수의 자릿수를 바꾸어 가면서 vector에 있는 수와 같은지 비교.
 ```
+
+**[4408. 자기 방으로 돌아가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWNcJ2sapZMDFAV8&categoryId=AWNcJ2sapZMDFAV8&categoryType=CODE)**
+```
+1. bfs 탐색으로 문제 해결.
+2. room,visited,dist 배열 각각 선언.
+3. i가 0 또는 2일떄 room 번호를 설정 하고 1일때는 복도이므로 방번호 0으로 초기화
+4. 출발지점과 도착지점을 입력으로 받으면 init() 함수를 통해 위치 계산 후, 방향 결정.
+5. bfs 탐색을 하면서 반대 방향으로 가거나 다른 방으로 가거나 범위를 벗어나면 continue, 도착지점에 도착하면 return, 복도에 따라 걷는 경우 dist++
+```
