@@ -270,3 +270,12 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 4. 출발지점과 도착지점을 입력으로 받으면 init() 함수를 통해 위치 계산 후, 방향 결정.
 5. bfs 탐색을 하면서 반대 방향으로 가거나 다른 방으로 가거나 범위를 벗어나면 continue, 도착지점에 도착하면 return, 복도에 따라 걷는 경우 dist++
 ```
+
+**[4530. 극한의 청소 작업](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWO6cgzKOIEDFAWw&categoryId=AWO6cgzKOIEDFAWw&categoryType=CODE&&&&&&)**
+```
+1. 두 입력 A,B가 음수인지 양수인지에 따라 경우를 나뉘어서 계산한다.
+2. A<0,B<0일 경우 fn(-A)-fn(-B)
+3. A<0,B>0일 경우 fn(-A)+fn(B)-1(0층은 없으므로)
+4. A>0,B>0일 경우 fn(B)-fn(A)
+5. fn 함수는 숫자를 매개변수로 받아 각 숫자를 10으로 나눈 나머지가 4보다 큰지 작은지에 따라 res에 값을 누적시키는 함수이다.
+```
