@@ -279,3 +279,11 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 4. A>0,B>0일 경우 fn(B)-fn(A)
 5. fn 함수는 숫자를 매개변수로 받아 각 숫자를 10으로 나눈 나머지가 4보다 큰지 작은지에 따라 res에 값을 누적시키는 함수이다.
 ```
+
+**[4613. 러시아 국기 같은 깃발](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWQl9TIK8qoDFAXj&categoryId=AWQl9TIK8qoDFAXj&categoryType=CODE)**
+```
+1. 입력을 받은 후, 첫번째 열과 마지막 열을 검사해서 흰색, 빨간색이 아니면 바꿔주고 ans++
+2. 2번쨰 줄부터 N-1번째 줄까지 dfs 탐색을 실행.
+3. check 배열의 값을 바꿔주면서 dfs 탐색을 실행하는데 이전의 값보다 크거나 같음을 유지해야 한다.
+4. 또한, dfs 탐색이 끝난 후엔 N-1배열부터 빨간색이 되므로 3으로 바꿔준다.
+```
