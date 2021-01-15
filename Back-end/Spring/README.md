@@ -213,4 +213,30 @@
 * LocalDateTime 변수를 생성하고 repository.save로 데이터베이스에 넣는다.
 * getCreate, getModified 함수를 통해 값이 같은지 확인한다.
 
+## 머스테치
 
+* 템플릿 엔진 : 지정된 템플릿 양식과 데이터가 합쳐져 html 문서를 출력하는 소프트웨어
+* jsp를 view의 역할만 하도록 구성하면 서버 템플릿 엔진처럼 동작.(서버에서 java 코드로 문자열을 만들어 html로 변환하여 브라우저로 전달)
+* javascript는 브라우저 위에서 작동
+
+* 머스테치 : 수많은 언어를 지원하는 가장 심플한 템플릿 엔진.
+ -문법이 다른 템플릿 엔진보다 심플.
+ -로직 코드를 사용할 수 없어 view의 역할과 서버의 역할을 명확하게 분리
+ -하나의 문법으로 클라이언트/서버 템플릿 모두 사용 가능.
+ 
+ * build.gradle에 compile('org.springframework.boot:spring-boot-starter-mustach')로 의존성 추가
+ * 기본 페이지를 만들기 위해 resources/templates/index.mustache 파일을 만듬.
+ * Controller에 맵핑을 해주고 실행.
+
+## 게시글 등록 화면 만들기
+
+* 프론트엔드 라이브러리를 사용할 수 있는 방법 2가지 중(외부 CDN, 직접 라이브러리 받기) 외부 CDN을 사용함.(실제 서비스에서는 이 방법 활용 x)
+* HTML/JSP/Mustache에 코드 추가.
+* 레이아웃 방식으로 통해 추가(공통 영역을 별도의 파일로 분리하여 필요한 곳에서 가져다 쓰는 방식)
+* index.mustach에 글 등록 버튼을 생성(<a>태그)
+* 버튼 클릭시 이동할 페이지의 주소를 컨트롤러에 @GetMapping으로 설정
+* posts-save.mustache 추가(게시글을 등록하는 폼 생성)
+* /posts/save 에서 등록 버튼에 기능을 주기 위해 static/js/app/index.js 생성
+
+
+ 
