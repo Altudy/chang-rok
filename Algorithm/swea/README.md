@@ -287,3 +287,9 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 3. check 배열의 값을 바꿔주면서 dfs 탐색을 실행하는데 이전의 값보다 크거나 같음을 유지해야 한다.
 4. 또한, dfs 탐색이 끝난 후엔 N-1배열부터 빨간색이 되므로 3으로 바꿔준다.
 ```
+
+**[4672. 수진이의 팰린드롬](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWRKNev6fqYDFAV8&categoryId=AWRKNev6fqYDFAV8&categoryType=CODE)**
+```
+1. 같은 문자가 서로 붙게 만들어서 문자열을 구성하면 팰린드롬의 수가 최대가 된다.
+2. 연속으로 붙어있는 문자열의 수 가 n이면 그 개수는 n*(n+1)/2 이다.
+```
