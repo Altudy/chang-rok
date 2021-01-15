@@ -141,7 +141,7 @@
 * H2는 MySQL의 쿼리를 수행해도 정상적으로 작동하기 떄문에 application.properties 설정 변경.
   -spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
   
-## 등록/수정/조회 API 만들기
+## 등록 API 만들기
 
 * 3가지 클래스 필요
   -Request 데이터를 받을 dto
@@ -174,3 +174,43 @@
 
 * JPA 기능을 이용하기 때문에 @WebMvcTest 어노테이션은 사용하지 않고 @SpringBootTest와 TestRestTemplate 사용.
 * 테스트시 랜덤 포트에 대한 검증도 함.
+
+## 수정/조회 API 만들기
+
+* Controller에 수정과 조회에 해당하는 @PutMapping과 @GetMapping 선언(id값을 Path로 받으므로 인자에 @PathVariable 선언)
+* Service에 update와 findById를 처리해줄 메소드 각각 선언.
+* update관련 PostUpdateRequestDto로 post.update() 기능 수행.
+ -update 기능에서 데이터베이스에 쿼리를 날리는 부분이 없는데, 이는 JPA의 영속성 컨텍스트 때문임.
+ -트랜잭션 안에서 데이터베이스에서 데이터를 가져오면 영속성 컨텍스트가 유지된 상태이므로 이 안에서 update 실행하면 반영됨.
+* id 값으로 조회하는 PostResponseDto를 만들어서 repository.findById(id)를 통해 가져온 entity를 dto에 담아서 return
+
+## 테스트 코드로 검증
+
+* PostsApiControllerTest에 코드 작성. (update 기능 테스트)
+* 조회 기능 테스트는 톰캣을 실행해서 테스트
+* 데이터베이스로 H2를 이용하므로 직접 접근하기 위해 웹 콘솔을 사용.
+ -application.properties에 spring.h2.console.enabled=true 설정
+* Application에서 main 메소드 실행후 localhost:8080/h2-console에서  jdbc url -> jdbc:h2:mem:testdb 설정
+
+## JPA Auditing으로 생성시간/수정시간 자동화
+
+* Domain 패키지에 BaseTimeEntity 클래스 생성
+* 모든 Entity의 상위 클래스가 되어 Entity들의 createdDate, modifiedDate를 자동으로 관리
+* @MappedSuperclass
+ -JPA Entity 클래스들이 BaseTimeEntity을 상속할 경우 필드들도 칼럼으로 인식하도록 한다.
+* @EntityListeners(AuditingEntityListener.class)
+ -Auditing 기능을 포함
+* @CreatedDate
+ -Entity가 생성되어 저장될 때 시간이 자동으로 저장
+* @LastModifiedDate
+ -조회한 Entity의 값을 변경할 때 시간이 자동 저장.
+* Post 클래스가 BaseTimeEntity 클래스를 상속받도록 설정.
+* JPA Auditing 어노테이션들을 모두 활성화 하기 위해 Application 클래서 @EnableJpaAuditing 어노테이션 추가.
+
+## JPA Auditing 테스트 코드 작성
+
+* PostsRepositoryTest에 @Test 추가.
+* LocalDateTime 변수를 생성하고 repository.save로 데이터베이스에 넣는다.
+* getCreate, getModified 함수를 통해 값이 같은지 확인한다.
+
+
