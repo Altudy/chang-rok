@@ -238,5 +238,23 @@
 * posts-save.mustache 추가(게시글을 등록하는 폼 생성)
 * /posts/save 에서 등록 버튼에 기능을 주기 위해 static/js/app/index.js 생성
 
+## 전체 조회 화면 만들기
 
+* index.mustache 파일에 목록 출력 영역 추가.
+* {{#posts}}
+ -posts라는 List를 순회
+* {{변수명}}
+ -List에서 뽑아낸 객체의 필드
+* 전체 조회 쿼리는 SpringDataJpa에서 제공하지 않으므로 PostsRepository에 @Query 추가.
+* Service에서 @Transactional(readOnly = true)를 주어 트랜잭션 범위는 유지하되, 조회 기능만 남겨두어 조회 속도를 개선.
+* Repository 결과로 넘어온 Posts의 stream을 map을 통해 PostsListRequestDto로 변환 -> List로 반환.
+* 컨트롤러에서 model에 담아 index.mustache로 넘겨줌.
+
+## 게시글 수정, 삭제 화면 만들기
+
+* 게시글 수정 화면(posts-update.mustache)생성, index.mustache에 타이틀을 클릭시 게시글 수정 화면으로 이동하도록 설정.
+* 게시글 수정 화면에 삭제 버튼도 생성하고 클릭 시 Controller->Service에서 처리하도록 한다.
+* 처리 시 존재하는 posts인지 확인을 위해 존재 후 삭제한다.
  
+# 로그인
+
