@@ -1,1 +1,0 @@
-[Pandas_Cheat_Sheet](http://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
