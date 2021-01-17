@@ -238,5 +238,43 @@
 * posts-save.mustache 추가(게시글을 등록하는 폼 생성)
 * /posts/save 에서 등록 버튼에 기능을 주기 위해 static/js/app/index.js 생성
 
+## 전체 조회 화면 만들기
 
+* index.mustache 파일에 목록 출력 영역 추가.
+* {{#posts}}
+ -posts라는 List를 순회
+* {{변수명}}
+ -List에서 뽑아낸 객체의 필드
+* 전체 조회 쿼리는 SpringDataJpa에서 제공하지 않으므로 PostsRepository에 @Query 추가.
+* Service에서 @Transactional(readOnly = true)를 주어 트랜잭션 범위는 유지하되, 조회 기능만 남겨두어 조회 속도를 개선.
+* Repository 결과로 넘어온 Posts의 stream을 map을 통해 PostsListRequestDto로 변환 -> List로 반환.
+* 컨트롤러에서 model에 담아 index.mustache로 넘겨줌.
+
+## 게시글 수정, 삭제 화면 만들기
+
+* 게시글 수정 화면(posts-update.mustache)생성, index.mustache에 타이틀을 클릭시 게시글 수정 화면으로 이동하도록 설정.
+* 게시글 수정 화면에 삭제 버튼도 생성하고 클릭 시 Controller->Service에서 처리하도록 한다.
+* 처리 시 존재하는 posts인지 확인을 위해 존재 후 삭제한다.
  
+# 로그인
+
+* spring security와 OAuth 2.0을 구현한 구글 로그인을 연동하여 로그인 기능.
+* 직접 구현 하게 되면 아래와 같은 기능을 모두 구현해야함
+ 1) 로그인 시 보안
+ 2) 비밀번호 찾기
+ 3) 회원가입 시 이메일 혹은 전화번호 인증
+ 4) 비밀번호 변경
+ 5) 회원정보 변경
+ 
+* spring boot 1.5 vs 2.0
+ -spring-security-oauth2-autoconfigure 라이브러리를 사용하면 1.5의 설정을 그대로 사용할 수 있음.
+ -1.5보다 설정이 간편(client 인증 정보만 입력하면 됨.)
+
+## 구글 서비스 등록
+
+* 구글 서비스에 신규 서비스를 생성
+* 발급된 은증 정보를 통해 로그인 기능과 소셜 서비스 기능을 사용.
+* 구글 클라우드 플랫폼에서 OAuth 동의 화면에 Google API 범위 추가
+* application-oauth 등록
+* application-oauth.properties 내에 클라이언트 id와 보안 비밀 정보 입력, scope=email,profile 만 입력
+ - profile=xxx 식으로 호출하면 해당 properties의 설정들을 가져올 수 있음.
