@@ -258,3 +258,23 @@
  
 # 로그인
 
+* spring security와 OAuth 2.0을 구현한 구글 로그인을 연동하여 로그인 기능.
+* 직접 구현 하게 되면 아래와 같은 기능을 모두 구현해야함
+ 1) 로그인 시 보안
+ 2) 비밀번호 찾기
+ 3) 회원가입 시 이메일 혹은 전화번호 인증
+ 4) 비밀번호 변경
+ 5) 회원정보 변경
+ 
+* spring boot 1.5 vs 2.0
+ -spring-security-oauth2-autoconfigure 라이브러리를 사용하면 1.5의 설정을 그대로 사용할 수 있음.
+ -1.5보다 설정이 간편(client 인증 정보만 입력하면 됨.)
+
+## 구글 서비스 등록
+
+* 구글 서비스에 신규 서비스를 생성
+* 발급된 은증 정보를 통해 로그인 기능과 소셜 서비스 기능을 사용.
+* 구글 클라우드 플랫폼에서 OAuth 동의 화면에 Google API 범위 추가
+* application-oauth 등록
+* application-oauth.properties 내에 클라이언트 id와 보안 비밀 정보 입력, scope=email,profile 만 입력
+ - profile=xxx 식으로 호출하면 해당 properties의 설정들을 가져올 수 있음.
