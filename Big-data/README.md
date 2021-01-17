@@ -186,3 +186,13 @@
 * 데이터가 자주 바뀌는 경우 매번 입력 데이터 집합 전체를 읽으므로 속도가 느림.
 * 의존성이 있는 계산은 맵리듀스로 실행하지 못함.
 
+## hadoop이용
+
+* virtualbox에 cloudera 이미지 가져와서 부팅
+ - 오류가 생겨서 cmd에 bcdedit /set hypervisorlaunchedsetoff 명령 실행 후 os 다시시작함.
+* 텍스트파일 다운 받은 후 hadoop fs -copyFromLocal words.txt 로 hdfs로 옮김.
+* hadoop jar /usr/jars/hadoop-examples.jar 명령을 통해 응용프로그램 목록을 볼 수 있음.
+* hadoop jar /usr/jars/hadoop-examples.jar wordcount words.txt out 명령으로 WordCount를 실행
+ -hadoop은 map 및 Reduce의 측면에서 진행 상황을 인쇄.
+* out 파일을 보면 out_SUCCESS로 성공적으로 실행되었음을 확인 가능, out part-r-00000를 실행하여 로컬 시스템에 복사
+* more local.txt로 살펴보면 입력 파일에 있는 단어의 발생수를 확인 가능.
