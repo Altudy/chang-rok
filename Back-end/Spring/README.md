@@ -279,3 +279,7 @@
 * application-oauth.properties 내에 클라이언트 id와 보안 비밀 정보 입력, scope=email,profile 만 입력
  - profile=xxx 식으로 호출하면 해당 properties의 설정들을 가져올 수 있음.
 
+## 배포 스크립트 만들기
+
+* 배포할 때마다 개발자가 하나하나 명령어를 실행하는 것은 불편함이 많으므로 쉘 스크립트를 작성
+* 
