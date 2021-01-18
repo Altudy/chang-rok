@@ -278,3 +278,4 @@
 * application-oauth 등록
 * application-oauth.properties 내에 클라이언트 id와 보안 비밀 정보 입력, scope=email,profile 만 입력
  - profile=xxx 식으로 호출하면 해당 properties의 설정들을 가져올 수 있음.
+
