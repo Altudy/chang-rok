@@ -293,3 +293,10 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 1. 같은 문자가 서로 붙게 만들어서 문자열을 구성하면 팰린드롬의 수가 최대가 된다.
 2. 연속으로 붙어있는 문자열의 수 가 n이면 그 개수는 n*(n+1)/2 이다.
 ```
+
+**[4699. 콩순이의 가장 싼 팰린드롬](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWRurBkKkKADFAXt)**
+```
+1. 각 문자를 삽입할 때와 제거할때 값중 작은 값을 배열에 저장
+2. 문자열이 주어질 때, 처음과 끝이 같지 않을 때까지 길이를 줄여나감.
+3. 같지 않은 지점이 왔을 때, 1) 처음 부분을 삽입 or 삭제 2) 끝 부분을 삽입 or 삭제 하면서 길이를 줄여나간다.
+```
