@@ -307,3 +307,10 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 2. 감소하는 시점에서 up!=0 이면 down++, 그렇지 않다면 pass
 3. 해당 index에서 down++했는데 그 다음요소보다 작다면 ans 계산.
 ```
+
+**[5213. 진수의 홀수 약수](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWT-hF8KdBADFAVT)**
+```
+1. 2부터 10000000까지 dp배열에 값을 누적시켜 저장
+2. 1부터 현재 숫자(i)의 sqrt까지 i에서 나누면서 나누어 떨어지고 홀수 인 것만 R에 누적시킨다.
+3. 그 후, i를 j로 나눈 값 또한 R에 누적 시킨다.
+```
