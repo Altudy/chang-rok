@@ -300,3 +300,10 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 2. 문자열이 주어질 때, 처음과 끝이 같지 않을 때까지 길이를 줄여나감.
 3. 같지 않은 지점이 왔을 때, 1) 처음 부분을 삽입 or 삭제 2) 끝 부분을 삽입 or 삭제 하면서 길이를 줄여나간다.
 ```
+
+**[4796. 의석이의 우뚝 선 산](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWS2h6AKBCoDFAVT&categoryId=AWS2h6AKBCoDFAVT&categoryType=CODE)**
+```
+1. m배열의 루프를 돌면서 숫자가 이전에 비해 증가하면 up++
+2. 감소하는 시점에서 up!=0 이면 down++, 그렇지 않다면 pass
+3. 해당 index에서 down++했는데 그 다음요소보다 작다면 ans 계산.
+```
