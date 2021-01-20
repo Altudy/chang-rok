@@ -322,3 +322,10 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 3. ')'일 경우 바로 앞이 '('면 레이저 이므로 stack의 사이즈 만큼 ans에 값을 누적시킨다.
 4. 바로 앞이 '('가 아니면 쇠막대기가 닫힌것이므로 1을 더한다.
 ```
+
+**[5550. 나는 개구리로소이다](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWWxqfhKAWgDFAW4)**
+```
+1. 첫 문자 c가 들어오면 croak 벡터에 넣어 이후의 문자가 차례로 들어오는지 확인.
+2. 1의 과정에서 c이외의 문자가 들어왔을때 check=true로 바꾸어 이외의 문자는 무시.
+3. check=false일 경우(첫문자 c가 들어오고 그 다음 문자인 r이 아직 안들어온 경우) 다른 c가 들어온다면 croak배열에 넣음.
+```
