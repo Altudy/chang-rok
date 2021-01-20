@@ -314,3 +314,11 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 2. 1부터 현재 숫자(i)의 sqrt까지 i에서 나누면서 나누어 떨어지고 홀수 인 것만 R에 누적시킨다.
 3. 그 후, i를 j로 나눈 값 또한 R에 누적 시킨다.
 ```
+
+**[5432. 쇠막대기 자르기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWVl47b6DGMDFAXm&categoryId=AWVl47b6DGMDFAXm&categoryType=CODE)**
+```
+1. stack을 이용하여 문제 해결
+2. '('일 경우 push하고 ')'일 경우 조건에 따라서 ans에 값을 누적해 나감.
+3. ')'일 경우 바로 앞이 '('면 레이저 이므로 stack의 사이즈 만큼 ans에 값을 누적시킨다.
+4. 바로 앞이 '('가 아니면 쇠막대기가 닫힌것이므로 1을 더한다.
+```
