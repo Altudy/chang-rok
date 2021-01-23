@@ -340,3 +340,10 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 ```
 1. N개의 숫자를 오름차순으로 정렬한 뒤, 뒤에서 K번째부터 ans를 계산하여 누적해 간다.
 ```
+
+**[6731. 홍익이의 오델로 게임](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWefzFeq5P8DFAUh&categoryId=AWefzFeq5P8DFAUh&categoryType=CODE)**
+```
+1. 각 위치에서 row,col에 있는 'B'의 개수가 홀수이면 뒤집은 지점이므로 이중 루프를 통해 'B'가 홀수인 지점을 세면 된다.
+2. 입력을 받을 때, row,col 배열을 각각 만들어서 'B'의 개수를 카운트 해줌.(이렇게 해주지 않으면 탐색시 제한시간 초과 발생)
+
+```
