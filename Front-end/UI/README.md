@@ -1,5 +1,12 @@
 [웹 UI 개발](https://www.boostcourse.org/web344)
 
+# 목차
+* reset_css(#1-reset_css)
+* IR기법(#2-IR기법)
+* float 해제(#3-float-해제)
+* 
+
+
 # 1. reset_css
 ```
 * 어떤 브라우저에서든 사용자들이 동일한 경험을 할 수 있도록 크로스브라우징 원칙을 지켜서 코딩해야한다.
@@ -263,4 +270,16 @@ box-sizing: border-box; 속성을 줌.
 * table 태그로 레이아웃을 잡고
 * 특정 td의 border에 색을 주면 right,bottom만 보임(table의 border-collapse: collapse 속성 때문)
 * 위의 문제를 해결하기 위해 td의 border를 top과 left만 준다.
+```
+
+## 9. 팝업
+```
+* 특정 영역 위치에 레이어를 특정 시점에 노출.
+* popup(새창), modal(레이어팝업), alert(시스템팝업)
+
+* 레이어팝업+딤드 배경 제작-1
+* popup 클래스 밑에 popup_layer와 popup_dimmed 클래스가 있음.
+* popup_dimmed가 화면 전체에 깔리게 하기 위해 position:absolute; 속성을 주고 popup_layer에 position:relative;와 z-index를 주어 그 위로 보이게함.
+* btn_area가 popup_layer의 하단에 나타내기 위해 position:absolute를 줌.
+* button의 기본 속성으로 인해 width:50%를 해도 한 줄에 안들어오므로 float 처리, 따라서 btn_area에는 overflow:hidden 처리
 ```
