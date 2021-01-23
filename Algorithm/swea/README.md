@@ -329,3 +329,9 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 2. 1의 과정에서 c이외의 문자가 들어왔을때 check=true로 바꾸어 이외의 문자는 무시.
 3. check=false일 경우(첫문자 c가 들어오고 그 다음 문자인 r이 아직 안들어온 경우) 다른 c가 들어온다면 croak배열에 넣음.
 ```
+
+**[6109. 추억의 2048게임](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWbrg9uabZsDFAWQ&categoryId=AWbrg9uabZsDFAWQ&categoryType=CODE)**
+```
+1. 입력받은 배열m 을 방향에 따라 계산하여 정답인 ans 배열에 옮김.
+2. ans 배열에 값을 넣을 때 cnt를 세서 0이 중간에 들어오지 않게함.
+```
