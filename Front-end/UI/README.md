@@ -288,4 +288,6 @@ box-sizing: border-box; 속성을 줌.
 * popup_dimmed가 화면 전체에 깔리게 하기 위해 position:absolute; 속성을 주고 popup_layer에 position:relative;와 z-index를 주어 그 위로 보이게함.
 * btn_area가 popup_layer의 하단에 나타내기 위해 position:absolute를 줌.
 * button의 기본 속성으로 인해 width:50%를 해도 한 줄에 안들어오므로 float 처리, 따라서 btn_area에는 overflow:hidden 처리
+
+* popup.html, popup.css
 ```
