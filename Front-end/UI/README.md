@@ -22,8 +22,10 @@
 ```
 * 상황에 따라 수정해서 써야 한다는 것에 주의.
 ```
+[목차](#목차)
 
-# 2. IR기법(Image Replacement)
+
+# 2. IR기법
 ```
 * 웹 접근성 중 '적절한 대체 텍스트 제공'에 관해 대체 텍스트를 마크업으로 제공.
 * <img> 태그의 alt 속성 값으로 표현하기에 대체 텍스트가 너무 길거나, CSS background 속성을 사용하여 처리한 의미 있는 이미지일 경우, 마크업으로 대체 텍스트를 제공.
@@ -290,4 +292,25 @@ box-sizing: border-box; 속성을 줌.
 * button의 기본 속성으로 인해 width:50%를 해도 한 줄에 안들어오므로 float 처리, 따라서 btn_area에는 overflow:hidden 처리
 
 * popup.html, popup.css
+```
+
+## 9-1. 팝업 중앙 정렬
+```
+* 팝업 사이즈 고정
+* position:absolute;로 요소를 띄워서 margin으로 위치 조절
+* margin:auto;는 상황에 따라서 0 또는 auto로 처리됨
+  * 0으로 처리되는 경우
+    -상하 margin
+    -inline,float 요소, 혹은 absolute,fixed로 위치가 고정된 요소의 모든 margin
+  * auto로 처리되는 경우
+    -width가 있는 요소의 좌우 margin
+    -absolute의 top + bottom + height 혹은 left + right + width 값이 함께 있는 요소의 모든 margin
+    
+* 팝업 사이즈 가변
+* popup_layer를 display:inline-block;으로 바꾸어 text-align:center;로 가로 중앙 정렬
+* popup에 빈요소 또는 가상요소를 통해 vertical-align:middle;로 세로 중앙 정렬
+
+* display:table; 과 table-cell; 이용
+* popup_layer를 감싸는 두개의 div를 각각 table, table-cell로 속성을 주고 popup_layer를 inline-block 요소로 변경
+* popup_layer 바로 위 부모에 vertical-align과 text-align 속성을 통해 가로,세로 정렬.
 ```
