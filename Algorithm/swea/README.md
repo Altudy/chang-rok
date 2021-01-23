@@ -347,3 +347,10 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 2. 입력을 받을 때, row,col 배열을 각각 만들어서 'B'의 개수를 카운트 해줌.(이렇게 해주지 않으면 탐색시 제한시간 초과 발생)
 
 ```
+
+**[6855. 신도시 전기 연결하기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWhUBBUqQO0DFAW_&categoryId=AWhUBBUqQO0DFAW_&categoryType=CODE)**
+```
+1. 도시 사이의 간격을 구해서 최소인 것만 더하면 된다.
+2. 발전소의 개수 K개가 정해져 있으므로 K-1개의 도시 사이의 간격을 뺄 수 있다. 따라서 뺄 수 있는 부분을 최대로 하면 된다.
+3. 도시 사이의 간격을 vector에 담아서 오름차순으로 정렬후 index 0부터 N-K까지 더하면 된다.
+```
