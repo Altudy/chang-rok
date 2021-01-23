@@ -22,8 +22,6 @@
 ```
 * 상황에 따라 수정해서 써야 한다는 것에 주의.
 ```
-[목차](#목차)
-
 
 # 2. IR기법
 ```
@@ -65,6 +63,8 @@
 
 * promotion_page.html,  promotion_page.css, promotion_img.png
 ```
+[목차로 바로가기](#목차)
+
 
 # 3. float 해제
 ```
@@ -86,6 +86,7 @@
 * 부모 요소에 :after를 이용하여 자식 요소들 중 가장 마지막에 위치, 그 후에 블록 요소를 만들고 clear 해제.
 * 가상 요소는 content 요소가 필수임이 중요.
 ```
+[목차로 바로가기](#목차)
 
 # 4. 레이아웃
 ```
@@ -155,6 +156,7 @@
 
 * layout_fixed2.html, layout_fixed2.css
 ```
+[목차로 바로가기](#목차)
 
 ## 5. 메뉴
 ```
@@ -188,6 +190,7 @@
 
 * menu_2.html,  menu_2.css
 ```
+[목차로 바로가기](#목차)
 
 ## 6. 탭
 ```
@@ -201,6 +204,7 @@ box-sizing: border-box; 속성을 줌.
 
 * tab.html, tab.css
 ```
+[목차로 바로가기](#목차)
 
 ## 7. 이미지 목록
 ```
@@ -244,6 +248,7 @@ box-sizing: border-box; 속성을 줌.
 
 * img_list_made.html,   img_list_made.css
 ```
+[목차로 바로가기](#목차)
 
 ## 8. 표
 ```
@@ -279,6 +284,7 @@ box-sizing: border-box; 속성을 줌.
 * 특정 td의 border에 색을 주면 right,bottom만 보임(table의 border-collapse: collapse 속성 때문)
 * 위의 문제를 해결하기 위해 td의 border를 top과 left만 준다.
 ```
+[목차로 바로가기](#목차)
 
 ## 9. 팝업
 ```
@@ -314,3 +320,5 @@ box-sizing: border-box; 속성을 줌.
 * popup_layer를 감싸는 두개의 div를 각각 table, table-cell로 속성을 주고 popup_layer를 inline-block 요소로 변경
 * popup_layer 바로 위 부모에 vertical-align과 text-align 속성을 통해 가로,세로 정렬.
 ```
+[목차로 바로가기](#목차)
+
