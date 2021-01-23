@@ -335,3 +335,8 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 1. 입력받은 배열m 을 방향에 따라 계산하여 정답인 ans 배열에 옮김.
 2. ans 배열에 값을 넣을 때 cnt를 세서 0이 중간에 들어오지 않게함.
 ```
+
+**[6719. 성수의 프로그래밍 강좌 시청](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWd7sgDatsMDFAUh&categoryId=AWd7sgDatsMDFAUh&categoryType=CODE)**
+```
+1. N개의 숫자를 오름차순으로 정렬한 뒤, 뒤에서 K번째부터 ans를 계산하여 누적해 간다.
+```
