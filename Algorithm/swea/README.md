@@ -354,3 +354,10 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 2. 발전소의 개수 K개가 정해져 있으므로 K-1개의 도시 사이의 간격을 뺄 수 있다. 따라서 뺄 수 있는 부분을 최대로 하면 된다.
 3. 도시 사이의 간격을 vector에 담아서 오름차순으로 정렬후 index 0부터 N-K까지 더하면 된다.
 ```
+
+**[6959. 이상한 나라의 덧셈게임](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWjlH0k63joDFAVT&categoryId=AWjlH0k63joDFAVT&categoryType=CODE)**
+```
+1. 숫자가 주어지면 어떤 방법을 쓰든 결과는 이미 정해져있다.
+2. 입력을 문자열로 받아서 stack에 쪼개서 넣은뒤, stack의 크기가 1이될 때까지 두 수의 덧셈을 진행한다.
+3. 2의 과정시 덧셈을 진행하는 cnt를 세서 짝수면 B의 승리, 홀수면 A의 승리다.
+```
