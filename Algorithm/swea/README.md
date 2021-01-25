@@ -361,3 +361,11 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 2. 입력을 문자열로 받아서 stack에 쪼개서 넣은뒤, stack의 크기가 1이될 때까지 두 수의 덧셈을 진행한다.
 3. 2의 과정시 덧셈을 진행하는 cnt를 세서 짝수면 B의 승리, 홀수면 A의 승리다.
 ```
+
+**[7088. 은기의 송아지 세기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWkIeU76A9cDFAXC)**
+```
+1. segment Tree algorithm으로 해결
+2. struct Tree를 선언하여 1-3번 품종(q1,q2,q3)을 변수로 선언하고 struct끼리 덧셈을 진행하기 위해 연산자 오버로딩 선언
+3. 배열 m에 입력을 받고 init() 메소드를 통해서 segment Tree 구성.
+4. Q만큼 left,right가 입력으로 주어졌을 때, sum() 메소드를 통해서 1-3번 품종의 개수 return.
+```
