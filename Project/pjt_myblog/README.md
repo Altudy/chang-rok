@@ -11,6 +11,7 @@
   * [Spring](#5-Spring)
   * [Test](#6-Test)
   * [Spring JDBC](#7-Spring-JDBC)
+  * [Spring MVC](#8-Spring-MVC)
 * [진행과정](#진행과정)
   * [환경 구성](#1-환경-구성)
 
@@ -134,8 +135,25 @@
 * verify()
  -verify(가짜 객체).동작(), 가짜 객체의 동작을 호출된 적이 있는지 검증
  
-## 7.  
+## 7. Spring JDBC
+
+* JDBC 프로그래밍의 반복되는 개발 요소가 있음.
+* JDBC의 모든 저수준 세부사항을 스프링 프레임워크가 처리
+* 개발자는 필요한 부분만 개발
+
+* dto(data transfer object)
+ -계층간 데이터 교환을 위한 자바빈즈
+* dao(data access object)
+ -데이터베이스를 조작하는 기능을 전담하는 목적
+* ConnectionPool
+ -미리 커넥션을 여러 개 맺어 두고 필요할 때 빌려서 사용한 후 반납.
+* DataSource
+ -커넥션 풀을 관리하는 목적으로 사용되는 객체
  
+## 8. Spring MVC
+
+* 
+
 # 진행과정 
 
 ## 1. 환경 구성
