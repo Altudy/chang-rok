@@ -72,6 +72,16 @@
 
 momentum - [READEME.md](https://github.com/Altudy/chang-rok/tree/master/Project/pjt_vanillaJS_chrome_app)
 
+#### 실시간 버스 위치 정보 조회 서비스
+
+  ##### 주요기능
+  
+    1. 버스 번호를 입력하면 5초마다 실시간 버스의 위치를 볼 수 있다.
+    
+![bus_location](https://user-images.githubusercontent.com/56072258/105633001-8936a880-5e99-11eb-9dc1-b0f9aa1d0fcd.gif)
+
+[READEME.md](https://github.com/Altudy/chang-rok/tree/master/Project/pjt_bus_pos)
+
 ### Contacts 📫
 
 * Github Repo Issue
