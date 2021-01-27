@@ -369,3 +369,8 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 3. 배열 m에 입력을 받고 init() 메소드를 통해서 segment Tree 구성.
 4. Q만큼 left,right가 입력으로 주어졌을 때, sum() 메소드를 통해서 1-3번 품종의 개수 return.
 ```
+
+**[7103. 준홍이의 네 개의 제곱수](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWkImrCqBeoDFAXC)**
+```
+1. 제곱수가 최대 4개까지의 합으로 N이 이루어질 수 있으므로 3중 루프를 통해서 n1,n2,n3 값을 구하고 n3의 제곱근 값이 정수이면 ans++
+```
