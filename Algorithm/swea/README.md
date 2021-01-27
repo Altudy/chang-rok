@@ -374,3 +374,10 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 ```
 1. 제곱수가 최대 4개까지의 합으로 N이 이루어질 수 있으므로 3중 루프를 통해서 n1,n2,n3 값을 구하고 n3의 제곱근 값이 정수이면 ans++
 ```
+
+**[7194. 화섭이의 미생물 배양](https://swexpertacademy.com/main/code/problem/problemSolverCodeDetail.do)**
+```
+1. b가 1일때와 아닐때의 경우를 나누어서 풀이
+2. b가 1일때는 T-S가 a로 나누어떨어지는지의 여부에 따라 결정됨.
+3. b가 1일 아닐 때는 T가 S보다 클때 루프를 반복하면서 b로 나뉘어 떨어지면 나누고 아니면 a를 빼는 방식으로 진행.
+```
