@@ -381,3 +381,9 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 2. b가 1일때는 T-S가 a로 나누어떨어지는지의 여부에 따라 결정됨.
 3. b가 1일 아닐 때는 T가 S보다 클때 루프를 반복하면서 b로 나뉘어 떨어지면 나누고 아니면 a를 빼는 방식으로 진행.
 ```
+
+**[7338. 현규의 연봉계산법](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AWmYcWyqAcQDFAV3&categoryId=AWmYcWyqAcQDFAV3&categoryType=CODE&problemTitle=&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=4&pageSize=10&pageIndex=5)**
+```
+1. 입력받은 Y,M에 대해 그 차이가 총 몇개월 인지 구한다.
+2. 13으로 나눈 몫만큼 2016년에서 더하고 13으로 나눈 나머지만큼 1에서 더한다.
+```
