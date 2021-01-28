@@ -394,3 +394,11 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 2. dfs로 완전탐색을 하면서 4방향을 검사하여 전선을 이을 수 있다면 그 길이를 2로 설정
 3. 4방향이 안된다면 index 증가시킨 후 다시 dfs 
 ```
+
+**[7333. 한솔이의 택배 아르바이트](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AWmYaDf6AWQDFAV3&categoryId=AWmYaDf6AWQDFAV3&categoryType=CODE&problemTitle=&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=4&pageSize=10&pageIndex=5)**
+```
+1. 입력을 오름차순으로 정렬후, left와 right 2개의 index를 잡아 비교하면서 풀이
+2. right의 값이 50이상이면 ans++, right--
+3. 그렇지 않다면 left의 값을 더하면서 cnt*right의값이 50이상될때까지 left++
+4. 전체 루프를 빠져나오면 s==e일 경우를 고려해줘서 ans++;
+```
