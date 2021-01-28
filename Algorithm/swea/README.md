@@ -402,3 +402,13 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 3. 그렇지 않다면 left의 값을 더하면서 cnt*right의값이 50이상될때까지 left++
 4. 전체 루프를 빠져나오면 s==e일 경우를 고려해줘서 ans++;
 ```
+
+**[7393. 대규의 팬덤활동](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWm8gU7KljcDFASj)**
+```
+1. bitmask dp를 이용하여 풀이 (해결하지 못해서 답 참조)
+2. 배열 [길이][0~9][2^10] 으로 설정하여 m[101][11][1024] 설정 ( 0~9까지 10이지만 dfs 탐색 도중 탐색 시간을 줄이기 위해 ret을 검사하는 과정에서 num이 10이 들어올 수 있으므로 11로 잡음)
+3. ans는 1~9로 시작하면서 길이가 1에서 n일때까지 dfs 탐색을 한다.
+4. 탐색 과정에서 msk |= (1<<num) 연산을 통해 해당 숫자가 포함되게 한다.
+5. 길이가 n일 되었을 때 msk의 값이 1023이면 0~9까지의 숫자가 모두 들어있는 것이므로 1을 return
+6. 따라서 bottom-up 방식으로 dfs를 진행해 값을 채워 나감.
+```
