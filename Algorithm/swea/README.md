@@ -387,3 +387,10 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 1. 입력받은 Y,M에 대해 그 차이가 총 몇개월 인지 구한다.
 2. 13으로 나눈 몫만큼 2016년에서 더하고 13으로 나눈 나머지만큼 1에서 더한다.
 ```
+
+**[1767. [SW Test 샘플문제] 프로세서 연결하기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV4suNtaXFEDFAUf)**
+```
+1. 가장자리가 아닌 core를 vector에 push
+2. dfs로 완전탐색을 하면서 4방향을 검사하여 전선을 이을 수 있다면 그 길이를 2로 설정
+3. 4방향이 안된다면 index 증가시킨 후 다시 dfs 
+```
