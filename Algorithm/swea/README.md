@@ -418,3 +418,9 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 1. 두 사람 x,y에 대해 입력으로 받아 edge 배열에 저장
 2. 1부터 N까지 dfs탐색을 하면서 연결되어 있고 방문하지 않은 상태라면 dfs
 ```
+
+**[7701. 염라대왕의 이름 정렬](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AWqU0zh6rssDFARG&categoryId=AWqU0zh6rssDFARG&categoryType=CODE&problemTitle=&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=4&pageSize=10&pageIndex=5)**
+```
+1. 입력을 set에 저장하여 중복 제거
+2. set을 vector에 담은 후 cmp 비교 함수를 통해 
+```
