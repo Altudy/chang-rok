@@ -424,3 +424,8 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 1. 입력을 set에 저장하여 중복 제거
 2. set을 vector에 담은 후 cmp 비교 함수를 통해 
 ```
+
+**[7699. 수지의 수지 맞는 여행](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AWqUzj0arpkDFARG&categoryId=AWqUzj0arpkDFARG&categoryType=CODE&problemTitle=&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=4&pageSize=10&pageIndex=5)**
+```
+1. dfs 탐색을 하면서 방문한 문자열을 체크해서 다시 방문하지 못하게 한다.
+```
