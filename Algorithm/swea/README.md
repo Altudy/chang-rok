@@ -412,3 +412,9 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 5. 길이가 n일 되었을 때 msk의 값이 1023이면 0~9까지의 숫자가 모두 들어있는 것이므로 1을 return
 6. 따라서 bottom-up 방식으로 dfs를 진행해 값을 채워 나감.
 ```
+
+**[7465. 창용 마을 무리의 개수](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWngfZVa9XwDFAQU)**
+```
+1. 두 사람 x,y에 대해 입력으로 받아 edge 배열에 저장
+2. 1부터 N까지 dfs탐색을 하면서 연결되어 있고 방문하지 않은 상태라면 dfs
+```
