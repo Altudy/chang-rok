@@ -442,3 +442,11 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 2. 알파벳이 많이 포함되어 있는 것을 찾아야 하므로 입력받은 str의 길이만큼 루프를 돌면서 set에 char을 넣어 갯수를 구함.
 3. 2의 과정에서 ' '(space)가 포함되지 않도록 주의.
 ```
+
+**[7810. 승현이의 질문](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWslG2zqFQcDFASy)**
+```
+1. 이분 탐색 알고리즘으로 풀이
+2. 입력으로 받은 숫자를 cnt배열에 증가시킴.
+3. 최댓값부터 0까지 값을 줄여가며 이전값을 누적해서 더해나감(현재자리 이 후로 숫자가 몇개 있는지 저장)
+4. 이분 탐색을 하면서 조건에 만족하면 ans 값 
+```
