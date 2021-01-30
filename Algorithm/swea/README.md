@@ -429,3 +429,9 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 ```
 1. dfs 탐색을 하면서 방문한 문자열을 체크해서 다시 방문하지 못하게 한다.
 ```
+
+**[7733. 치즈 도둑](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWrDOdQqRCUDFARG)**
+```
+1. 초기 입력을 받을 때 숫자에 대한 정보를 map에 넣음.
+2. 1일차부터 maxn까지 세면서 해당 숫자 날짜를 0으로 만들어 bfs 탐색 진행.
+```
