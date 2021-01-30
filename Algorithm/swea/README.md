@@ -435,3 +435,10 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 1. 초기 입력을 받을 때 숫자에 대한 정보를 map에 넣음.
 2. 1일차부터 maxn까지 세면서 해당 숫자 날짜를 0으로 만들어 bfs 탐색 진행.
 ```
+
+**[7792. 반장 선출](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AWsBNHuqMMADFARG&categoryId=AWsBNHuqMMADFARG&categoryType=CODE&problemTitle=&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=4&pageSize=10&pageIndex=4)**
+```
+1. 공백을 포함하여 입력을 받아야 하므로 getline(cin,str)로 입력을 받음.
+2. 알파벳이 많이 포함되어 있는 것을 찾아야 하므로 입력받은 str의 길이만큼 루프를 돌면서 set에 char을 넣어 갯수를 구함.
+3. 2의 과정에서 ' '(space)가 포함되지 않도록 주의.
+```
