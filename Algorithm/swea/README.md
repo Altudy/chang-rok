@@ -455,3 +455,9 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 ```
 1. 입력을 오름차순으로 정렬 후 처음과 가장 마지막 수를 곱하면 된다.
 ```
+
+**[7854. 최약수](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AWttVkiq5jEDFASy&categoryId=AWttVkiq5jEDFASy&categoryType=CODE&problemTitle=&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=4&pageSize=10&pageIndex=4)**
+```
+1. 각 자리수에 따라 최약수가 정해져 있음, 3자리까지는 고정 이후로는 3자리 수에서 뒤에 0만 붙이면됨
+2. 입력받은 X의 길이에 따라 맞게 처리하고 길이가 3이상부터 앞의 3자리만 substr해서 3자리 수의 최약체 수 배열을 돌며 크기 
+```
