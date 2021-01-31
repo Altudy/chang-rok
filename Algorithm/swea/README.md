@@ -450,3 +450,8 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 3. 최댓값부터 0까지 값을 줄여가며 이전값을 누적해서 더해나감(현재자리 이 후로 숫자가 몇개 있는지 저장)
 4. 이분 탐색을 하면서 조건에 만족하면 ans 값 
 ```
+
+**[7829. 보물왕 태혁](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AWtInr3auH0DFASy&categoryId=AWtInr3auH0DFASy&categoryType=CODE&problemTitle=&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=4&pageSize=10&pageIndex=4)**
+```
+1. 입력을 오름차순으로 정렬 후 처음과 가장 마지막 수를 곱하면 된다.
+```
