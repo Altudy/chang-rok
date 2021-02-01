@@ -461,3 +461,10 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 1. 각 자리수에 따라 최약수가 정해져 있음, 3자리까지는 고정 이후로는 3자리 수에서 뒤에 0만 붙이면됨
 2. 입력받은 X의 길이에 따라 맞게 처리하고 길이가 3이상부터 앞의 3자리만 substr해서 3자리 수의 최약체 수 배열을 돌며 크기 
 ```
+
+**[7965. 퀴즈](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWuSh2IKmu0DFASy)**
+```
+1. dp배열에 값을 누적해서 쌓아가는 방식으로 풀이.
+2. pows 함수를 통해 n^n을 계산.
+3. 2의 과정에서 10^10 = 10^5 * 10^5 의 특성을 이용하여 풀이.
+```
