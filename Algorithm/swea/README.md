@@ -468,3 +468,11 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 2. pows 함수를 통해 n^n을 계산.
 3. 2의 과정에서 10^10 = 10^5 * 10^5 의 특성을 이용하여 풀이.
 ```
+
+**[7988. 내전 경기](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AWvQZmdKUoEDFASy&categoryId=AWvQZmdKUoEDFASy&categoryType=CODE&problemTitle=&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=4&pageSize=10&pageIndex=4)**
+```
+1. 입력을 받으면서 map<string,int> 에 저장. m.count(s1)의 값이 0이라면 새로운 값이므로 node 번호 할당.
+2. 1의 과정을 진행하면서 동시에 edge 연결 정보 저장.
+3. 0번 node부터 n번까지 진행하면서 i번째 node의 색이 바뀌지 않았다면 dfs 탐색시작.
+4. 자신과 연결된 node의 색은 모두 다르게 색칠한다. 그래야 시너지 효과가 발생하지 않는다.
+```
