@@ -484,5 +484,11 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 1-2. 찾았다면 해당 위치부터 "MCM"만큼 visit 배열에 true로 바꾸고 앞의 위치에서 F를 탐색 후, 뒤에서 M을 탐색
 2. FC~MF 의 경우를 탐색
 2-1. 1과 마찬가지 경우로 탐색.
+```
 
+**[8382. 방향 전환](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AWyNQrCahHcDFAVP&categoryId=AWyNQrCahHcDFAVP&categoryType=CODE&problemTitle=&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=4&pageSize=10&pageIndex=4&&&&&&&&&&)**
+```
+1. 두 좌표의 차이 x,y에 대해서 더 작은 값의 2배만큼 이동할 수 있다.
+2. 그 후, x,y에서 각각 최솟값을 빼면 둘 중 하나는 0이 된다. 그러면 일직선 상에서 이동 경로를 찾으면 된다.
+3. 일직선 상의 경로가 짝수면 2배이고 홀수면 2배 -1 해주면된다.
 ```
