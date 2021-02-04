@@ -476,3 +476,13 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 3. 0번 node부터 n번까지 진행하면서 i번째 node의 색이 바뀌지 않았다면 dfs 탐색시작.
 4. 자신과 연결된 node의 색은 모두 다르게 색칠한다. 그래야 시너지 효과가 발생하지 않는다.
 ```
+
+**[8049. 폭탄 감식반](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AWv0_-j6aRsDFASy&categoryId=AWv0_-j6aRsDFASy&categoryType=CODE&problemTitle=&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=4&pageSize=10&pageIndex=4)**
+```
+1. FF~MCM~ 의 경우를 탐색
+1-1. find() 메소드를 통해 "MCM" 문자열의 위치를 찾고 없다면 탐색 종료
+1-2. 찾았다면 해당 위치부터 "MCM"만큼 visit 배열에 true로 바꾸고 앞의 위치에서 F를 탐색 후, 뒤에서 M을 탐색
+2. FC~MF 의 경우를 탐색
+2-1. 1과 마찬가지 경우로 탐색.
+
+```
