@@ -499,3 +499,10 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 2. check배열에 각 노드의 depth를 기록하고 dfs 탐색을하면서 check배열이 0이 아니고 next와 prev가 다르다면 사이클 완성이으므로 ans을 갱신해준다.
 3. 사이클은 총 1개이므로 ans 갱신후 ans가 0이 아니라면 함수를 종료 시켜준다.
 ```
+
+**[8458. 원점으로 집합](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWzaq5KKk_ADFAVU)**
+```
+1. 좌표와 영점 사이의 거리를 계산해 dist 배열에 저장
+2. 짝수와 홀수의 개수를 각각 세서 짝수와 홀수가 동시에 있다면 절대 영점으로 같이 보낼 수 없으므로 -1 출력
+3. 짝수와 홀수 중 각각 최대인 값을 x에 저장하여 y에 1,2,3,4,...값을 누적시켜 더해가면서 y>=x 이고 x,y가 각각 2로 나눈 나머지가 같은지 다른지 탐색.
+```
