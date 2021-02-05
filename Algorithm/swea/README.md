@@ -492,3 +492,10 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 2. 그 후, x,y에서 각각 최솟값을 빼면 둘 중 하나는 0이 된다. 그러면 일직선 상에서 이동 경로를 찾으면 된다.
 3. 일직선 상의 경로가 짝수면 2배이고 홀수면 2배 -1 해주면된다.
 ```
+
+**[8424. 유일한 사이클](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AWyxsBd6lyADFAVP&categoryId=AWyxsBd6lyADFAVP&categoryType=CODE&problemTitle=&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=4&pageSize=10&pageIndex=3)**
+```
+1. 노드의 연결정보를 edge 배열에 담은 후, dfs 탐색 시작
+2. check배열에 각 노드의 depth를 기록하고 dfs 탐색을하면서 check배열이 0이 아니고 next와 prev가 다르다면 사이클 완성이으므로 ans을 갱신해준다.
+3. 사이클은 총 1개이므로 ans 갱신후 ans가 0이 아니라면 함수를 종료 시켜준다.
+```
