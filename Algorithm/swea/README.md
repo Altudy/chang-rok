@@ -530,3 +530,10 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 2. cnt배열은 숫자 i의 약수의 개수를 담은 배열이고, dp배열은 숫자 1~i까지 중 약수의 개수가 가장 많은 숫자를 담은 배열이다.
 3. 매 루프마다 cnt,dp 배열을 채워나가면 해결.
 ```
+
+**[8568. 3으로 나눈 순열](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AW1B8rJq3NUDFARC&categoryId=AW1B8rJq3NUDFARC&categoryType=CODE&problemTitle=&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=4&pageSize=10&pageIndex=3)**
+```
+1. 선택정렬을 이용하여 해결.
+2. 배열 끝까지 탐색했을 때 스왑을 하지 못한다면 cnt++
+3. cnt가 증가 되었다면 스왑을 하지 못했으므로 최소 3개의 숫자가 자리를 바꾸지 못한 것이다. 그럴 경우 2번 이동해야 하므로 (cnt/3)*2의 값을 ans에 더해준다.
+```
