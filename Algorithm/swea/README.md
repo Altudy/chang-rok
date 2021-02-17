@@ -523,3 +523,10 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 3. 즉, dp[4] = dp[3] + ((n-1)! + dp[3]) + dp[3] + ((n-1)! + dp[3]) 이다.
 4. 일반화 하면 dp[n] = n*dp[n-1] + (n/2)*(n-1)!
 ```
+
+**[8567. 약수의 개수가 많은 수](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AW1B2yIa28MDFARC&categoryId=AW1B2yIa28MDFARC&categoryType=CODE&problemTitle=&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=4&pageSize=10&pageIndex=3)**
+```
+1. 2부터 10^5+1까지 루프를 돌면서 cnt와 dp 배열을 채운다.
+2. cnt배열은 숫자 i의 약수의 개수를 담은 배열이고, dp배열은 숫자 1~i까지 중 약수의 개수가 가장 많은 숫자를 담은 배열이다.
+3. 매 루프마다 cnt,dp 배열을 채워나가면 해결.
+```
