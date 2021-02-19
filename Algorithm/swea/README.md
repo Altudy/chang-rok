@@ -537,3 +537,10 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 2. 배열 끝까지 탐색했을 때 스왑을 하지 못한다면 cnt++
 3. cnt가 증가 되었다면 스왑을 하지 못했으므로 최소 3개의 숫자가 자리를 바꾸지 못한 것이다. 그럴 경우 2번 이동해야 하므로 (cnt/3)*2의 값을 ans에 더해준다.
 ```
+
+**[8676. 동현이와 한결이는 아이돌](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AW2Jo6bqABMDFATy&categoryId=AW2Jo6bqABMDFATy&categoryType=CODE&problemTitle=&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=4&pageSize=10&pageIndex=3)**
+```
+1. dynamic programming으로 해결(풀지 못해서 다른 사람 코드를 참조)
+2. 'SAMSUNG' 길이에 맞게 dp 배열을 선언후 0으로 초기화한다.
+3. 입력된 문자열을 탐색하면서 'S'의 경우 0,3 인덱스를 이전의 값과 자신의 값을 더해 누적시켜 나간다. (dp[i] = dp[i-1] + dp[i])
+```
