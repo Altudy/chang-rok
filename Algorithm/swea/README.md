@@ -544,3 +544,8 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 2. 'SAMSUNG' 길이에 맞게 dp 배열을 선언후 0으로 초기화한다.
 3. 입력된 문자열을 탐색하면서 'S'의 경우 0,3 인덱스를 이전의 값과 자신의 값을 더해 누적시켜 나간다. (dp[i] = dp[i-1] + dp[i])
 ```
+
+**[8659. GCD](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AW1l1s2KWn4DFARC)**
+```
+1. GCD를 K번 진행했을 때, 가장 작은 A,B 조합을 구해야 하므로 GCD(1,0) 인 경우에서 역으로 올라가 계산하면 된다.
+```
