@@ -506,3 +506,46 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 2. 짝수와 홀수의 개수를 각각 세서 짝수와 홀수가 동시에 있다면 절대 영점으로 같이 보낼 수 없으므로 -1 출력
 3. 짝수와 홀수 중 각각 최대인 값을 x에 저장하여 y에 1,2,3,4,...값을 누적시켜 더해가면서 y>=x 이고 x,y가 각각 2로 나눈 나머지가 같은지 다른지 탐색.
 ```
+
+**[8501. 은비의 동전 뒤집기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWz50CHK8DgDFARQ)**
+```
+1. dp[3]=5
+1 2 3 / 1
+1 3 2 / 2
+2 1 3 / 1
+2 3 1 / 1
+3 1 2 / 0
+3 2 1 / 0
+2. dp[4]는 위의 각 자리에 4를 넣는 것.
+2-1. 첫째 자리에 4를 넣으면 (4) 1 2 3 , (4) 1 3 2 , ... 기존과 같다.
+2-2. 그 다음에 4를 넣으면 4가 앞면이 되므로 그것만큼 추가해줘야한다. (4-1)!
+2-3. 4가 앞면이 되는 경우의 수를 고려해보면 4 앞의 수가 홀수개 이면 추가해준다.
+3. 즉, dp[4] = dp[3] + ((n-1)! + dp[3]) + dp[3] + ((n-1)! + dp[3]) 이다.
+4. 일반화 하면 dp[n] = n*dp[n-1] + (n/2)*(n-1)!
+```
+
+**[8567. 약수의 개수가 많은 수](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AW1B2yIa28MDFARC&categoryId=AW1B2yIa28MDFARC&categoryType=CODE&problemTitle=&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=4&pageSize=10&pageIndex=3)**
+```
+1. 2부터 10^5+1까지 루프를 돌면서 cnt와 dp 배열을 채운다.
+2. cnt배열은 숫자 i의 약수의 개수를 담은 배열이고, dp배열은 숫자 1~i까지 중 약수의 개수가 가장 많은 숫자를 담은 배열이다.
+3. 매 루프마다 cnt,dp 배열을 채워나가면 해결.
+```
+
+**[8568. 3으로 나눈 순열](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AW1B8rJq3NUDFARC&categoryId=AW1B8rJq3NUDFARC&categoryType=CODE&problemTitle=&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=4&pageSize=10&pageIndex=3)**
+```
+1. 선택정렬을 이용하여 해결.
+2. 배열 끝까지 탐색했을 때 스왑을 하지 못한다면 cnt++
+3. cnt가 증가 되었다면 스왑을 하지 못했으므로 최소 3개의 숫자가 자리를 바꾸지 못한 것이다. 그럴 경우 2번 이동해야 하므로 (cnt/3)*2의 값을 ans에 더해준다.
+```
+
+**[8676. 동현이와 한결이는 아이돌](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AW2Jo6bqABMDFATy&categoryId=AW2Jo6bqABMDFATy&categoryType=CODE&problemTitle=&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=4&pageSize=10&pageIndex=3)**
+```
+1. dynamic programming으로 해결(풀지 못해서 다른 사람 코드를 참조)
+2. 'SAMSUNG' 길이에 맞게 dp 배열을 선언후 0으로 초기화한다.
+3. 입력된 문자열을 탐색하면서 'S'의 경우 0,3 인덱스를 이전의 값과 자신의 값을 더해 누적시켜 나간다. (dp[i] = dp[i-1] + dp[i])
+```
+
+**[8659. GCD](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AW1l1s2KWn4DFARC)**
+```
+1. GCD를 K번 진행했을 때, 가장 작은 A,B 조합을 구해야 하므로 GCD(1,0) 인 경우에서 역으로 올라가 계산하면 된다.
+```
