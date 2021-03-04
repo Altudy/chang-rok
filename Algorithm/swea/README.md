@@ -549,3 +549,11 @@ time = abs(pos-b_pos,o_pos)+1(버튼누름)+b_time,o_time(현재위치의 시간
 ```
 1. GCD를 K번 진행했을 때, 가장 작은 A,B 조합을 구해야 하므로 GCD(1,0) 인 경우에서 역으로 올라가 계산하면 된다.
 ```
+
+**[10994. 동전 수집](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AXXjAdya60IDFAST)**
+```
+1. 입력받은 배열 c만큼 루프를 돌면서 sum을 누적시키면서 조건을 만족할 때 개수를 증가시킨다.
+2. sum + c[i]가 k보다 크거나 같으면 break;
+3. d[i]가 1이 아니라면 새로운 동전을 얻는 경우 이므로 검사한다.
+4. sum + c[i] < c[i+1] 인 경우에만 sum을 증가시켜주어야 한다. 거스름돈의 조건중 A센트 이하만큼 거슬러 주기 때문.
+```
