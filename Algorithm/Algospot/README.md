@@ -39,3 +39,9 @@
 3. bottom-up 시 triangle 배열을 다음 테스트케이스 진행할 때마다 0으로 초기화 해주어야함.
 4. dp[i][j] = max(dp[i+1][j],dp[i+1][j+1]) + triangle[i][j] -> top-down
 5. return ret = max(dfs(i+1,j),dfs(i+1,j+1)) + triangle[i][j]; -> bottom-up
+
+# [최대 증가 부분 수열](https://algospot.com/judge/problem/read/LIS)
+
+1. 동적계획법
+2. bottom-up 방식으로 해결
+3. 현재 위치 idx에서 idx+1부터 n-1까지 검사하는데 num[idx] < num[i] 인경우 dp의 현재값과 탐색한 값에 1 더한 값중 max 값을 저장.
