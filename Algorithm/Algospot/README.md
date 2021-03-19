@@ -20,7 +20,7 @@
 
 # [와일드카드](https://www.algospot.com/judge/problem/read/WILDCARD)
 
-1. 동적계획법
+1. 동적 계획법
 2. 와일드카드 W와 입력받은 S를 비교하면서 가능하면 ans에 push_back
 3. match 함수의 인자로 w,s를 주고 각 자리의 문자를 비교하면서 pos 증가
 3-1. w[pos] == s[pos] || w[pos]=='?' , pos < w.size() && pos < s.size()
@@ -34,7 +34,7 @@
 
 # [삼각형 위의 최대 경로](https://www.algospot.com/judge/problem/read/TRIANGLEPATH)
 
-1. 동적계획법
+1. 동적 계획법
 2. top-down, bottom-up 두 가지 방식으로 해결 가능.
 3. bottom-up 시 triangle 배열을 다음 테스트케이스 진행할 때마다 0으로 초기화 해주어야함.
 4. dp[i][j] = max(dp[i+1][j],dp[i+1][j+1]) + triangle[i][j] -> top-down
@@ -42,6 +42,12 @@
 
 # [최대 증가 부분 수열](https://algospot.com/judge/problem/read/LIS)
 
-1. 동적계획법
+1. 동적 계획법
 2. bottom-up 방식으로 해결
 3. 현재 위치 idx에서 idx+1부터 n-1까지 검사하는데 num[idx] < num[i] 인경우 dp의 현재값과 탐색한 값에 1 더한 값중 max 값을 저장.
+
+# [합친 LIS](https://algospot.com/judge/problem/read/JLIS)
+
+1. 동적 계획법
+2. 최대 증가 부분 수열의 해법과 비슷
+3. dfs(inxA,idxB) = max( max(idxA+1,idxB)+1 , max(idxA,idxB+1)+1 )
