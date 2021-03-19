@@ -10,3 +10,10 @@
 2. mid 기준으로 1)왼쪽 2)오른쪽 3) mid를 포함한 값 중 max값을 리턴하며 함수 재귀 호출 실행.
 3. left와 right가 같다면 현재 index의 height 리턴
 4. 2에서 3)을 계산할 때, lo=mid, hi=mid+1로 초기화하고 lo-1과 hi+1 값을 비교하면서 높이가 더 높은 쪽으로 확장.
+
+# [외발 뛰기](https://www.algospot.com/judge/problem/read/JUMPGAME)
+
+1. 동적 계획법
+2. 시작점에서 게임판을 벗어나지 않는 한에서 아래, 오른쪽 방향으로 dfs 탐색을 해나간다.
+3. 탐색 과정에서 이전에 탐색한 지점을 다시 탐색할 가능성이 있으므로 메모이제이션 한다.
+3-1. (x,y) = (x+jumpsize,y) || (x,y+jumpsize)
