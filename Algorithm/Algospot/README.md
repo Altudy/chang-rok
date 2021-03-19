@@ -31,3 +31,11 @@
 8. match 함수의 인자로 W와 S의 시작 index를 줌.
 9. w의 위치와 s의 위치에서 이미 false가 나왔다면 이 값을 메모해줌. cache[w][s]
 10. 따라서 함수를 시작하기 전에 cache[w][s]값이 이미 계산되었다면 그 값을 리턴하고 그렇지 않다면 3-1,4,5의 과정을 통해 계산한 값을 리턴해줌.
+
+# [삼각형 위의 최대 경로](https://www.algospot.com/judge/problem/read/TRIANGLEPATH)
+
+1. 동적계획법
+2. top-down, bottom-up 두 가지 방식으로 해결 가능.
+3. bottom-up 시 triangle 배열을 다음 테스트케이스 진행할 때마다 0으로 초기화 해주어야함.
+4. dp[i][j] = max(dp[i+1][j],dp[i+1][j+1]) + triangle[i][j] -> top-down
+5. return ret = max(dfs(i+1,j),dfs(i+1,j+1)) + triangle[i][j]; -> bottom-up
