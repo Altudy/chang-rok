@@ -76,3 +76,12 @@
 
 4. minError를 O(1)로 계산하기 위해 부분합과 부분제곱합을 각각 계산함.(pSum[i]=pSum[i-1]+A[i] , pSqSum[i]=pSqSum[i-1]+A[i]*A[i])
 4-1. 미분을 통해 (A[i]-m)^2 를 계산하여 m의 값을 구할 수 있음. (m을 구할 시 평균에 가장 가까운 정수를 구해야하므로 반올림한 값을 사용)
+
+# [삼각형 위의 최대 경로 개수 세기](https://algospot.com/judge/problem/read/TRIPATHCNT)
+
+1. 동적 계획법
+2. (삼각형 위의 최대 경로)를 구한 후 dp배열을 하나 더 만들어 동적 계획법으로 풀이
+3. (x,y)에서 dp1[x+1][y] 와 dp1[x+1][y+1]의 크기를 비교하여 dp2[x][y]를 초기화
+3-1. dp1[x+1][y] > dp1[x+1][y+1] 의 경우, dp2[x][y] = solve2(x+1,y)
+3-2. dp1[x+1][y] < dp1[x+1][y+1] 의 경우, dp2[x][y] = solve2(x+1,y+1)
+3-3. dp1[x+1][y] == dp1[x+1][y+1] 의 경우, dp2[x][y] = solve2(x+1,y) + solve2(x+1,y+1)
