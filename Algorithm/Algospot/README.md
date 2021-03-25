@@ -3,6 +3,7 @@
 1. 분할 정복 알고리즘
 2. 주어진 문자열을 쪼개는 부분이 일정하지 않으므로 string::iterator을 이용
 3. 문자가 'w'나 'b'면 그 값을 리턴하고 아니라면 4부분에 대해 함수 재귀 호출 실행.
+4. 다시풀기
 
 # [울타리 잘라내기](https://www.algospot.com/judge/problem/read/FENCE)
 
@@ -10,6 +11,7 @@
 2. mid 기준으로 1)왼쪽 2)오른쪽 3) mid를 포함한 값 중 max값을 리턴하며 함수 재귀 호출 실행.
 3. left와 right가 같다면 현재 index의 height 리턴
 4. 2에서 3)을 계산할 때, lo=mid, hi=mid+1로 초기화하고 lo-1과 hi+1 값을 비교하면서 높이가 더 높은 쪽으로 확장.
+5. 다시풀기
 
 # [외발 뛰기](https://www.algospot.com/judge/problem/read/JUMPGAME)
 
@@ -31,6 +33,7 @@
 8. match 함수의 인자로 W와 S의 시작 index를 줌.
 9. w의 위치와 s의 위치에서 이미 false가 나왔다면 이 값을 메모해줌. cache[w][s]
 10. 따라서 함수를 시작하기 전에 cache[w][s]값이 이미 계산되었다면 그 값을 리턴하고 그렇지 않다면 3-1,4,5의 과정을 통해 계산한 값을 리턴해줌.
+11. 다시풀기
 
 # [삼각형 위의 최대 경로](https://www.algospot.com/judge/problem/read/TRIANGLEPATH)
 
@@ -45,12 +48,14 @@
 1. 동적 계획법
 2. bottom-up 방식으로 해결
 3. 현재 위치 idx에서 idx+1부터 n-1까지 검사하는데 num[idx] < num[i] 인경우 dp의 현재값과 탐색한 값에 1 더한 값중 max 값을 저장.
+4. 다시풀기
 
 # [합친 LIS](https://algospot.com/judge/problem/read/JLIS)
 
 1. 동적 계획법
 2. 최대 증가 부분 수열의 해법과 비슷
 3. dfs(inxA,idxB) = max( max(idxA+1,idxB)+1 , max(idxA,idxB+1)+1 )
+4. 
 
 # [원주율](https://algospot.com/judge/problem/read/PI)
 
