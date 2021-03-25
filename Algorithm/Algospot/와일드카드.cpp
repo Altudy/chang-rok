@@ -82,45 +82,48 @@ using namespace std;
 
 #define INF 9999
 
-int t, n;
+int n;
+string w, s;
 int cache[101][101];
-string W, S;
 
-bool match(int w, int s) {
-
-	int &ret = cache[w][s];
+bool dfs(int w_idx, int s_idx) {
+	int &ret = cache[w_idx][s_idx];
 	if (ret != -1) return ret;
 
-	while (w < W.size() && s < S.size() &&
-		(W[w] == S[s] || W[w] == '?')) {
-		w++;
-		s++;
+	while (w_idx < w.size() && s_idx < s.size()
+		&& (w[w_idx] == s[s_idx] || w[w_idx] == '?')) {
+		w_idx++;
+		s_idx++;
 	}
-
-	if (w == W.size()) return s == S.size();
-	if (W[w] == '*') {
-		for (int skip = 0; skip + s <= S.size(); skip++) {
-			if (match(w+1,s+skip))
-				return true;
+	if (w_idx == w.size()) {
+		return ret = (s_idx == s.size());
+	}
+	if (w[w_idx] == '*') {
+		for (int skip = 0; skip + s_idx <= s.size(); skip++) {
+			if (dfs(w_idx + 1, s_idx + skip)) {
+				return ret=1;
+			}
 		}
 	}
-	return false;
-
+	return ret=0;
 }
 
 int main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 	cout.tie(NULL);
+	int t;
 	cin >> t;
 	for (int tc = 0; tc < t; tc++) {
-		cin >> W;
+		cin >> w;
 		cin >> n;
-		memset(cache, -1, sizeof(cache));
 		vector<string> ans;
 		for (int i = 0; i < n; i++) {
-			cin >> S;
-			if (match(0, 0)) ans.push_back(S);
+			memset(cache, -1, sizeof(cache));
+			cin >> s;
+			if (dfs(0, 0)) {
+				ans.push_back(s);
+			}
 		}
 		sort(ans.begin(), ans.end());
 		for (int i = 0; i < ans.size(); i++) {
