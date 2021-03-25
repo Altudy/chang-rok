@@ -65,6 +65,7 @@
 2-2. 길이가 5인 조각의 난이도 + 5글자 빼고 나머지 수열의 최적해
 3. 2,2-1,2-2에 해당하는 값중 max 값을 구하면 됨.
 4.  dp[idx] = L(3~5) max(dfs(idx+L) + 난이도 계산 함수())
+5.  
 
 # [Quntization](https://algospot.com/judge/problem/read/QUANTIZE)
 
