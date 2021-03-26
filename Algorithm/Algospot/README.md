@@ -135,3 +135,15 @@
 4. 장점 n개, 단점 m개를 조합하여 얻을 수 있는 개수는 n+m C n 이므로 이 값을 skip과 비교
 5. skip에 비해 작다면 그 값만큼 빼서 탐색 시간을 감소시킴. (메모이제이션)
 6. 4와 원리는 비슷 코드 참조.
+
+# [k번째 최대 증가 부분 수열](https://algospot.com/judge/problem/read/KLIS)
+
+1. 동적계획법
+2. lis(idx) = idx에서 시작하는 최대 증가 부분 수열의 길이 반환.
+3. k번째 수열을 구해야 하므로 각 idx에서 가질 수 있는 경우의 수를 구하는 함수가 필요
+4. count(idx) = idx를 포함하는 최대 증가 부분 수열의 개수 반환.
+5. reconstruct(start,skip,ans) = start에서 시작하는 LIS 중 skip개를 건너뛴 수열을 ans에 저장.
+6. start+1~n까지 루프를 돌면서 num[start]보다 크고 lis(start) == list(next)+1 인 idx를 followers에 저장
+7. 사전순으로 정렬해야하므로 pair<int,int> 에 담아 정렬한다. (숫자,idx)
+8. 해당 숫자의 count(idx)가 skip보다 작다면 그만큼 skip에서 빼고 아니라면 reconstruct 진행.
+9. 다시풀기
