@@ -147,3 +147,12 @@
 7. 사전순으로 정렬해야하므로 pair<int,int> 에 담아 정렬한다. (숫자,idx)
 8. 해당 숫자의 count(idx)가 skip보다 작다면 그만큼 skip에서 빼고 아니라면 reconstruct 진행.
 9. 다시풀기
+
+# [드래곤 커브](https://algospot.com/judge/problem/read/DRAGON)
+
+1. 동적 계획법
+2. n세대 드래곤 커브의 p번째 글자를 찾는 문제로 변환, 그 후 l번 반복
+3. p번째 글자를 찾기까지 skip할 수 있다면 skip.
+4. xLength(n) = "X+YF" -> 2 + xLength(n-1)+yLength(n-1)
+5. yLength(n) = "FX-Y" -> 2 + xLength(n-1)+yLength(n-1)
+6. length(n) = 2+2\*length(n-1) 로 변환 가능.
