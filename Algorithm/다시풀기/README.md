@@ -4,3 +4,4 @@
 * [차이를 최대로](https://www.acmicpc.net/problem/10819)
 * [리모컨](https://www.acmicpc.net/problem/1107)
 * [2048(esay)](https://www.acmicpc.net/problem/12100)
+* [보물섬](https://www.acmicpc.net/problem/2589)
