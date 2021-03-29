@@ -7,3 +7,4 @@
 * [보물섬](https://www.acmicpc.net/problem/2589)
 * [단어 수학](https://www.acmicpc.net/problem/1339)
 * [구슬 탈출2](https://www.acmicpc.net/problem/13460)
+* [사탕 게임](https://www.acmicpc.net/problem/3085)
