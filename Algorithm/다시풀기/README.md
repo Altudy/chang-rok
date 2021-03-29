@@ -9,3 +9,4 @@
 * [구슬 탈출2](https://www.acmicpc.net/problem/13460)
 * [사탕 게임](https://www.acmicpc.net/problem/3085)
 * [캐슬 ](https://www.acmicpc.net/problem/17135)
+* [숫자 야구](https://www.acmicpc.net/problem/2503)
