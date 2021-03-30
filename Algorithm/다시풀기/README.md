@@ -11,3 +11,4 @@
 * [캐슬 디펜스](https://www.acmicpc.net/problem/17135)
 * [숫자 야구](https://www.acmicpc.net/problem/2503)
 * [숫자 정사각형](https://www.acmicpc.net/problem/1051)
+* [가르침](https://www.acmicpc.net/problem/1062)
