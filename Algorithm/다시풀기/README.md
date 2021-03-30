@@ -8,5 +8,6 @@
 * [단어 수학](https://www.acmicpc.net/problem/1339)
 * [구슬 탈출2](https://www.acmicpc.net/problem/13460)
 * [사탕 게임](https://www.acmicpc.net/problem/3085)
-* [캐슬 ](https://www.acmicpc.net/problem/17135)
+* [캐슬 디펜스](https://www.acmicpc.net/problem/17135)
 * [숫자 야구](https://www.acmicpc.net/problem/2503)
+* [숫자 정사각형](https://www.acmicpc.net/problem/1051)
