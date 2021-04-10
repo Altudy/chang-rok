@@ -5,7 +5,7 @@
 * [리모컨](https://www.acmicpc.net/problem/1107)
 * [2048(esay)](https://www.acmicpc.net/problem/12100)
 * [보물섬](https://www.acmicpc.net/problem/2589)
-* [단어 수학](https://www.acmicpc.net/problem/1339)
+* [단어 수학](https://www.acmicpc.net/problem/1339) (완)
 * [구슬 탈출2](https://www.acmicpc.net/problem/13460)
 * [사탕 게임](https://www.acmicpc.net/problem/3085)
 * [캐슬 디펜스](https://www.acmicpc.net/problem/17135)
@@ -16,3 +16,4 @@
 * [색종이 붙이기](https://www.acmicpc.net/problem/17136)
 * [괄호 추가하기](https://www.acmicpc.net/problem/16637)
 * [미친로봇](https://www.acmicpc.net/problem/1405)
+* [소문난 칠공주](https://www.acmicpc.net/problem/1941)
