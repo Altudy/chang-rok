@@ -19,3 +19,4 @@
 * [소문난 칠공주](https://www.acmicpc.net/problem/1941)
 * [벡터매칭](https://www.acmicpc.net/problem/1007)
 * [로봇 청소기](https://www.acmicpc.net/problem/4991)
+* [종이 조각](https://www.acmicpc.net/problem/14391)
