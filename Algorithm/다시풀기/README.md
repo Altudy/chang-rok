@@ -22,3 +22,4 @@
 * [종이 조각](https://www.acmicpc.net/problem/14391)
 * [계란으로 계란치기](https://www.acmicpc.net/problem/16987)
 * [Maaaaaaaaaze](https://www.acmicpc.net/problem/16985)
+* [주사위 ](https://www.acmicpc.net/problem/2116)
