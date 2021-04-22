@@ -22,7 +22,7 @@
 </div>
 
 ![Rok's github stats](https://github-readme-stats.vercel.app/api?username=gksckdfhr98&show_icons=true)
-[![Solved.ac Rok](http://mazassumnida.wtf/api/v2/generate_badge?boj={handle})](https://solved.ac/gksckdfhr99)
+[![Solved.ac Rok](http://mazassumnida.wtf/api/v2/generate_badge?boj=gksckdfhr99)](https://solved.ac/gksckdfhr99)
 
 ### Why Back-end? 🖥
 
