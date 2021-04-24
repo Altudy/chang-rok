@@ -11,8 +11,8 @@
 * [캐슬 디펜스](https://www.acmicpc.net/problem/17135) v
 * [숫자 야구](https://www.acmicpc.net/problem/2503) v 
 * [숫자 정사각형](https://www.acmicpc.net/problem/1051) v 
-* [가르침](https://www.acmicpc.net/problem/1062) v (완)
-* [감소하는 수](https://www.acmicpc.net/problem/1038)
+* [가르침](https://www.acmicpc.net/problem/1062) v 
+* [감소하는 수](https://www.acmicpc.net/problem/1038) v (완)
 * [색종이 붙이기](https://www.acmicpc.net/problem/17136)
 * [괄호 추가하기](https://www.acmicpc.net/problem/16637)
 * [미친로봇](https://www.acmicpc.net/problem/1405)
