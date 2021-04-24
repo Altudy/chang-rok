@@ -13,8 +13,8 @@
 * [숫자 정사각형](https://www.acmicpc.net/problem/1051) v 
 * [가르침](https://www.acmicpc.net/problem/1062) v 
 * [감소하는 수](https://www.acmicpc.net/problem/1038) v 
-* [색종이 붙이기](https://www.acmicpc.net/problem/17136) v (완)
-* [괄호 추가하기](https://www.acmicpc.net/problem/16637)
+* [색종이 붙이기](https://www.acmicpc.net/problem/17136) v 
+* [괄호 추가하기](https://www.acmicpc.net/problem/16637) v (완)
 * [미친로봇](https://www.acmicpc.net/problem/1405)
 * [소문난 칠공주](https://www.acmicpc.net/problem/1941)
 * [벡터매칭](https://www.acmicpc.net/problem/1007)
