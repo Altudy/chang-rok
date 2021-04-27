@@ -23,3 +23,4 @@
 * [계란으로 계란치기](https://www.acmicpc.net/problem/16987)
 * [Maaaaaaaaaze](https://www.acmicpc.net/problem/16985)
 * [주사위](https://www.acmicpc.net/problem/2116)
+* [행운의 문자열](https://www.acmicpc.net/problem/1342)
