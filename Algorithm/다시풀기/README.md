@@ -24,3 +24,4 @@
 * [Maaaaaaaaaze](https://www.acmicpc.net/problem/16985)
 * [주사위](https://www.acmicpc.net/problem/2116)
 * [행운의 문자열](https://www.acmicpc.net/problem/1342)
+* [KCPC](https://www.acmicpc.net/problem/3758)
