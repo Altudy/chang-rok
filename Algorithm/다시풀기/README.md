@@ -28,3 +28,4 @@
 * [0 만들기](https://www.acmicpc.net/problem/7490)
 * [](https://www.acmicpc.net/problem/1034)
 * [gaaaaarden](https://www.acmicpc.net/problem/18809)
+* [고기잡](https://www.acmicpc.net/problem/7573)
