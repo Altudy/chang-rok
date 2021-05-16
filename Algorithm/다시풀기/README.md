@@ -30,3 +30,4 @@
 * [gaaaaarden](https://www.acmicpc.net/problem/18809)
 * [고기잡](https://www.acmicpc.net/problem/7573)
 * [직사각형으로 나누기](https://www.acmicpc.net/problem/1451)
+* [동전 뒤집기](https://www.acmicpc.net/problem/1285)
