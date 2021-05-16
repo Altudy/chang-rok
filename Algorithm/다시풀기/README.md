@@ -32,3 +32,4 @@
 * [직사각형으로 나누기](https://www.acmicpc.net/problem/1451)
 * [동전 뒤집기](https://www.acmicpc.net/problem/1285)
 * [페그 솔리테어](https://www.acmicpc.net/problem/9207)
+* [Byte Coin](https://www.acmicpc.net/problem/17521)
