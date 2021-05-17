@@ -33,3 +33,4 @@
 * [동전 뒤집기](https://www.acmicpc.net/problem/1285)
 * [페그 솔리테어](https://www.acmicpc.net/problem/9207)
 * [Byte Coin](https://www.acmicpc.net/problem/17521)
+* [그리드 그래프](https://www.acmicpc.net/problem/10252)
