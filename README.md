@@ -65,7 +65,7 @@
 
 >  
 >기술 스택:  
->JAVA 8 / SPRING / MariaDB / GIT / JSP
+>JAVA 8 / SPRING / MariaDB / GIT / JSP / JSOUP / GSON
 
 >  
 >[프로젝트 상세 설명]() 참고
