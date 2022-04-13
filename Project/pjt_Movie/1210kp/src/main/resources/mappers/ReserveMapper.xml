@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kdis.demo.dao.ReserveDao">
+
+
+	<!-- 쿠폰 번호 조회 -->
+	<select id="getCoupon" parameterType="String" resultType="com.kdis.demo.vo.UserCouponVO">
+		select c.couponId, c.couponNm, c.dscntRate, uc.expireDt FROM coupon c 
+		LEFT JOIN usercoupon uc ON c.couponId = uc.couponId 
+		WHERE (uc.expireDt <![CDATA[<=]]> c.registEndDt AND c.registStartDt <![CDATA[<=]]> uc.registDt) AND
+		uc.userId = "gksckdfhr99" AND c.registChk = "Y" AND uc.useChk = 1;
+	</select>
+
+</mapper>
