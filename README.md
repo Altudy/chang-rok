@@ -24,14 +24,14 @@
 </br>
 
 ## :pushpin: Projects
-### 1. [실시간 버스 위치 정보 조회](https://github.com/Integerous/goQuality)
+### 1. [실시간 버스 위치 정보 조회](https://github.com/Altudy/chang-rok/tree/master/Project/pjt_bus_pos)
 >버스 번호를 입력하면 실시간으로 버스 위치를 보여주는 시스템 (개인 프로젝트)  
 >개발 기간: 2021.01 ~ 2021.06  
 >  
 >기술 스택:  
 >JAVA 8 / SPRING BOOT / OPEN API(네이버 지도, 공공데이터 포털)  
 >  
->[프로젝트 상세 설명]() 참고
+>[프로젝트 상세 설명](https://github.com/Altudy/chang-rok/tree/master/Project/pjt_bus_pos) 참고
 
 ---
 
@@ -48,18 +48,18 @@
 
 ---
 
-### 3. [전시 정보 예약 관리 시스템]()
+### 3. [전시 정보 예약 관리 시스템](https://github.com/Altudy/chang-rok/tree/master/Project/pjt_reservation)
 >관심 있는 컨텐츠의 정보를 확인하고 예약하는 예약 관리 시스템  (졸업작품 프로젝트)  
 >개발 기간: 2020.07 ~ 2020.11  
 >  
 >기술 스택:  
 >JAVA 8 / SPRING / MySQL / GIT / JSP  
 >  
->[프로젝트 상세 설명]() 참고
+>[프로젝트 상세 설명](https://github.com/Altudy/chang-rok/tree/master/Project/pjt_reservation) 참고
 
 ---
 
-### 4. [영화 사이트 제작]()
+### 4. [영화 사이트 제작](https://github.com/Altudy/chang-rok/tree/master/Project/pjt_Movie)
 >CGV와 유사한 영화 예매 사이트  (팀 프로젝트)  
 >개발 기간: 2020.01 ~ 2020.12
 
@@ -68,7 +68,7 @@
 >JAVA 8 / SPRING / MariaDB / GIT / JSP / JSOUP / GSON
 
 >  
->[프로젝트 상세 설명]() 참고
+>[프로젝트 상세 설명](https://github.com/Altudy/chang-rok/tree/master/Project/pjt_Movie) 참고
 
 ---
 
