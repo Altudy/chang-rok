@@ -1,13 +1,22 @@
 package com.kdis.demo.vo;
 
 public class ReserveDto {
+
+	// reservation
+	private int reservation_id;
+
+	private String cancel_flag;
+
+	private String discount;
+
+	// reservation_info
+	private  String user_id;
 	private String title;
 	private String movieAge;
 	private String selectedTheater;
 	private String movieDate;
 	private String runningTime;
-	private String reserveDate;
-	private int price;
+	private int payMoney;
 	private String selectedSeat;
 	
 	public ReserveDto() {
@@ -15,16 +24,39 @@ public class ReserveDto {
 	}
 
 	public ReserveDto(String title, String movieAge, String selectedTheater, String movieDate, String runningTime,
-			String reserveDate, int price, String selectedSeat) {
+			String reserveDate, int payMoney, String selectedSeat) {
 		super();
 		this.title = title;
 		this.movieAge = movieAge;
 		this.selectedTheater = selectedTheater;
 		this.movieDate = movieDate;
 		this.runningTime = runningTime;
-		this.reserveDate = reserveDate;
-		this.price = price;
+		this.payMoney = payMoney;
 		this.selectedSeat = selectedSeat;
+	}
+
+	public int getReservation_id() {
+		return reservation_id;
+	}
+
+	public void setReservation_id(int reservation_id) {
+		this.reservation_id = reservation_id;
+	}
+
+	public String getDiscount() {
+		return discount;
+	}
+
+	public void setDiscount(String discount) {
+		this.discount = discount;
+	}
+
+	public String getCancel_flag() {
+		return cancel_flag;
+	}
+
+	public void setCancel_flag(String cancel_flag) {
+		this.cancel_flag = cancel_flag;
 	}
 
 	public String getTitle() {
@@ -67,20 +99,12 @@ public class ReserveDto {
 		this.runningTime = runningTime;
 	}
 
-	public String getReserveDate() {
-		return reserveDate;
+	public int getPayMoney() {
+		return payMoney;
 	}
 
-	public void setReserveDate(String reserveDate) {
-		this.reserveDate = reserveDate;
-	}
-
-	public int getPrice() {
-		return price;
-	}
-
-	public void setPrice(int price) {
-		this.price = price;
+	public void setPayMoney(int payMoney) {
+		this.payMoney = payMoney;
 	}
 
 	public String getSelectedSeat() {
@@ -94,7 +118,7 @@ public class ReserveDto {
 	@Override
 	public String toString() {
 		return "ReserveDto [title=" + title + ", movieAge=" + movieAge + ", selectedTheater=" + selectedTheater
-				+ ", movieDate=" + movieDate + ", runningTime=" + runningTime + ", reserveDate=" + reserveDate
-				+ ", price=" + price + ", selectedSeat=" + selectedSeat + "]";
+				+ ", movieDate=" + movieDate + ", runningTime=" + runningTime
+				+ ", payMoney=" + payMoney + ", selectedSeat=" + selectedSeat + "]";
 	}
 }

@@ -13,7 +13,7 @@ import com.kdis.demo.vo.CouponVO;
 import com.kdis.demo.vo.UserVO;
 
 @Service
-public class MemberService implements MemberDao{
+public class MemberService{
 	@Inject
 	private MemberDao MemberDAO;
 	 

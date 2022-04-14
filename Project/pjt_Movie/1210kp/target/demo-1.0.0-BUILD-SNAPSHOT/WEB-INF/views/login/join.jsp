@@ -357,12 +357,13 @@
 			var phoneNumberMsg = document.getElementById('phoneNumberMsg');
 
 
-			if(idMsg.dataset.flag == "false"){
-				alert("아이디를 확인해주세요.");
-				userId.focus();
-				return false;
-		
-			}else if(pwMsg.dataset.flag == "false"){
+			// if(idMsg.dataset.flag == "false"){
+			// 	alert("아이디를 확인해주세요.");
+			// 	userId.focus();
+			// 	return false;
+			//
+			// }else
+			if(pwMsg.dataset.flag == "false"){
 				alert("비밀번호를 확인해주세요.");
 				password.focus();
 				return false;

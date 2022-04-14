@@ -10,7 +10,7 @@ import com.kdis.demo.dao.AdminManageDao;
 import com.kdis.demo.vo.UserVO;
 
 @Service
-public class AdminManageService implements AdminManageDao{
+public class AdminManageService{
 	@Inject
 	private AdminManageDao adminManagerDao;
 	

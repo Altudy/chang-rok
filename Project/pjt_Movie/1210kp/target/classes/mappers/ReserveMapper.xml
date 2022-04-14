@@ -13,4 +13,30 @@
 		uc.userId = "gksckdfhr99" AND c.registChk = "Y" AND uc.useChk = 1;
 	</select>
 
+	<insert id="insertReserve" parameterType="com.kdis.demo.vo.ReserveDto">
+		INSERT INTO RESERVATION (canel_flag, discount, create_date, modify_date)
+		VALUES (
+		        #{cancel_flag},
+		        #{discount},
+		        SYSDATE,
+				SYSDATE
+			   )
+	</insert>
+
+	<insert id="insertReserveInfo" parameterType="com.kdis.demo.vo.ReserveDto">
+		INSERT INTO RESERVATION_INFO (reservation_id,user_id,title,movie_age,selected_theater,movie_date,running_time,reserve_date,pay_money,selected_seat)
+		VALUES (
+		        #{reservation_id},
+		        #{user_id},
+		        #{title},
+		        #{movie_age},
+		        #{selected_theater},
+		        #{movie_date},
+		        #{running_time},
+		        SYSDATE,
+		        #{pay_money},
+		        #{selected_seat}
+			   )
+	</insert>
+
 </mapper>

@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import com.kdis.demo.dao.LoginDao;
 
 @Service
-public class LoginService implements LoginDao{
+public class LoginService{
 
 	@Inject
 	private LoginDao LoginDAO;
@@ -43,7 +43,6 @@ public class LoginService implements LoginDao{
 		return LoginDAO.updateLoginFailCount(paramMap);
 	}
 
-	@Override
 	public Integer insertLoginHistory(Map<String, Object> paramMap) throws Exception {
 		return LoginDAO.insertLoginHistory(paramMap);
 	}

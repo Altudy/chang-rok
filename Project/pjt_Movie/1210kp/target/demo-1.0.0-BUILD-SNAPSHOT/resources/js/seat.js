@@ -87,6 +87,7 @@ function selectListUi(li){
 			normalNumber = normalMoney = 0;
 		}
 		ticketPrice.innerHTML = allMoney * tot_discount + '원';
+		payMoney.value = allMoney * tot_discount;
 	}
 	else if(li.parentNode.classList.contains('select-seat-ul-teen')){
 		teenNumber = Number(li.innerHTML);
@@ -102,6 +103,7 @@ function selectListUi(li){
 			teenNumber = teenMoney = 0;
 		}
 		ticketPrice.innerHTML = allMoney * tot_discount + '원';
+		payMoney.value = allMoney * tot_discount;
 	}
 	else if(li.parentNode.classList.contains('select-seat-ul-old')){
 		oldNumber = Number(li.innerHTML);
@@ -117,6 +119,7 @@ function selectListUi(li){
 			oldNumber = oldMoney = 0;
 		}
 		ticketPrice.innerHTML = allMoney * tot_discount + '원';
+		payMoney.value = allMoney * tot_discount;
 	}
 
 	if(alarm){
@@ -213,6 +216,7 @@ function inputClickEvent(input){
 				selectedSeatsArray.push(data.value);
 			});
 			selectedSeats.innerHTML = selectedSeatsArray;
+			selectedSeat.value = selectedSeats.innerHTML;
 			remainSeats.innerHTML = seat.length - selectedSeatsArray.length;
 		}
 	})
@@ -255,77 +259,77 @@ function mapping(input,i,j){
 }
 
 // 결제하기 버튼
-function payMent(){
-	paypal.Buttons({
-		createOrder: function(data, actions) {
-			// This function sets up the details of the transaction, including the amount and line item details.
-			return actions.order.create({
-				purchase_units: [{
-					amount: {
-						value: 1.00,
-						// value: payMoney.value
-						/* currency_cod : "KRW" */
-					}
-				}]/* ,
-    				application_context: {
-    					"return_url": "localhost:8080/complete",
-    					"cancel_url": "localhost:8080/cancel"
-    				} */
-			});
-		},
-		onApprove: function(data, actions) {
-			/* Set up a url on your server to execute the payment */
-			console.log(data);
-
-			var execute_url = '/order/executePayment';
-			/* Set up the data you need to pass to your server */
-			/* Make a call to your server to execute the payment */
-
-			$.ajax({
-				type:"GET",
-				url: execute_url + "?orderId="+data.orderID,
-				async: false,
-				success:function(data){
-					if(data.result == "success"){
-						// TODO
-						alert("결제성공~!");
-						// 결제성공 페이지 이동처리
-					}else if(data.result == "fail"){
-						toastr.error(
-							'<div style="color:white">좌석 예약에 실패 하였습니다.</div>',
-							'<div style="color:white">경고</div>', {
-								timeOut: 3000,
-							}
-						);
-						return;
-					}else{
-						toastr.error(
-							'<div style="color:white">좌석 예약에 실패 하였습니다.</div>',
-							'<div style="color:white">경고</div>', {
-								timeOut: 3000,
-							}
-						);
-					}
-				}
-			});
-
-			/* return fetch(execute_url, {
-                headers: {
-                    'content-type': 'application/json'
-                },
-                body: JSON.stringify({
-                    orderID: data.orderID
-                })
-            }).then(function(res) {
-                return res.json();
-              }).then(function(details) { // check for INSTRUMENT_DECLINED and restart OnApprove if true
-                if (details.error === 'INSTRUMENT_DECLINED') {
-                  return actions.restart();
-                }
-              });*/
-		}
-	}).render('#reserve-btn-wrapper');
-}
+// function payMent(){
+// 	paypal.Buttons({
+// 		createOrder: function(data, actions) {
+// 			// This function sets up the details of the transaction, including the amount and line item details.
+// 			return actions.order.create({
+// 				purchase_units: [{
+// 					amount: {
+// 						value: 1.00,
+// 						// value: payMoney.value
+// 						/* currency_cod : "KRW" */
+// 					}
+// 				}]/* ,
+//     				application_context: {
+//     					"return_url": "localhost:8080/complete",
+//     					"cancel_url": "localhost:8080/cancel"
+//     				} */
+// 			});
+// 		},
+// 		onApprove: function(data, actions) {
+// 			/* Set up a url on your server to execute the payment */
+// 			console.log(data);
+//
+// 			var execute_url = '/order/executePayment';
+// 			/* Set up the data you need to pass to your server */
+// 			/* Make a call to your server to execute the payment */
+//
+// 			$.ajax({
+// 				type:"GET",
+// 				url: execute_url + "?orderId="+data.orderID,
+// 				async: false,
+// 				success:function(data){
+// 					if(data.result == "success"){
+// 						// TODO
+// 						alert("결제성공~!");
+// 						// 결제성공 페이지 이동처리
+// 					}else if(data.result == "fail"){
+// 						toastr.error(
+// 							'<div style="color:white">좌석 예약에 실패 하였습니다.</div>',
+// 							'<div style="color:white">경고</div>', {
+// 								timeOut: 3000,
+// 							}
+// 						);
+// 						return;
+// 					}else{
+// 						toastr.error(
+// 							'<div style="color:white">좌석 예약에 실패 하였습니다.</div>',
+// 							'<div style="color:white">경고</div>', {
+// 								timeOut: 3000,
+// 							}
+// 						);
+// 					}
+// 				}
+// 			});
+//
+// 			/* return fetch(execute_url, {
+//                 headers: {
+//                     'content-type': 'application/json'
+//                 },
+//                 body: JSON.stringify({
+//                     orderID: data.orderID
+//                 })
+//             }).then(function(res) {
+//                 return res.json();
+//               }).then(function(details) { // check for INSTRUMENT_DECLINED and restart OnApprove if true
+//                 if (details.error === 'INSTRUMENT_DECLINED') {
+//                   return actions.restart();
+//                 }
+//               });*/
+// 		}
+// 	}).render('#reserve-btn-wrapper');
+// }
 
 // 할인 버튼 클릭 이벤트
 function couponClick(){
@@ -488,7 +492,7 @@ function init(){
 	selectSeatList(selectSeatListOld);
 	makingSeats();
 	seatInterval();
-	payMent();
+	// payMent();
 	couponClick();
 }
 

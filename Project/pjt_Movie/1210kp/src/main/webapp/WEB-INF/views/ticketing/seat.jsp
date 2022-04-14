@@ -149,7 +149,7 @@ MemberDto login = (MemberDto)session.getAttribute("login");
 					</div>
 					<div class="payment-wrapper">
 						<span class="payment-title">결제하기</span>
-						<form class="seatForm" action="moveReserve" method="post">
+						<form class="seatForm" action="moveReserve" method="POST">
 							<input type="hidden" class="title" name="title" value="${reserve.title}">
 				            <input type="hidden" class="movieAge" name="movieAge" value="${reserve.movieAge}">
 				            <input type="hidden" class="selectedTheater" name="selectedTheater" value="${reserve.selectedTheater}">
@@ -158,8 +158,8 @@ MemberDto login = (MemberDto)session.getAttribute("login");
 				            <!-- 티켓 정보 -->
 				            <input type="hidden" class="selectedSeat" name="selectedSeat">
 				            <input type="hidden" class="payMoney" name="payMoney">
-							<button type="button" class="reserve-btn">
-								<div id="reserve-btn-wrapper"></div>
+							<button type="submit" class="reserve-btn">
+								<div id="reserve-btn-wrapper" class="coupon_btn">예매</div>
 							</button>
 						</form>
 					</div>
