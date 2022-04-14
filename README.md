@@ -5,7 +5,7 @@
 ![Rok's github stats](https://github-readme-stats.vercel.app/api?username=gksckdfhr98&show_icons=true)
 [![Solved.ac Rok](http://mazassumnida.wtf/api/v2/generate_badge?boj=gksckdfhr99)](https://solved.ac/gksckdfhr99)
 
->캐치 프레이즈
+>혼자 빠르게 가기 보다는 <b><i>함께 멀리 갈 수 있는 개발자</i></b>가 되자!
 
 </br>
 
