@@ -33,8 +33,7 @@ public class TicketingAPIController {
 	
 	@Autowired
 	private ReserveService reserveService;
-	
-	// �씪蹂� 諛뺤뒪�삤�뵾�뒪 議고쉶
+
 	
 	  @GetMapping(value = "/api/getDailyBoxOffice", produces = "application/text; charset=utf-8") 
 	  public String getDailyBoxOffice() throws IOException { 
@@ -45,7 +44,7 @@ public class TicketingAPIController {
 	  
 		  StringBuilder urlBuilder = new StringBuilder("http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.xml");
 		  urlBuilder.append("?" + URLEncoder.encode("key","UTF-8") + "="+serviceKey);
-		  urlBuilder.append("&" + URLEncoder.encode("targetDt","UTF-8") + "=" +targetDt); //寃��깋�븷 �궇吏� 議고쉶(�떦�씪�� 議고쉶媛��븞�릺誘�濡� �븯猷� �쟾�쑝濡� 議고쉶)
+		  urlBuilder.append("&" + URLEncoder.encode("targetDt","UTF-8") + "=" +targetDt);
 		  URL url = new URL(urlBuilder.toString()); HttpURLConnection
 		  conn = (HttpURLConnection) url.openConnection();
 		  conn.setRequestMethod("GET"); conn.setRequestProperty("Content-type","application/text"); 
@@ -78,7 +77,7 @@ public class TicketingAPIController {
 //				"http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json"); /* URL */
 //		urlBuilder.append("?" + URLEncoder.encode("key", "UTF-8") + "=" + serviceKey); /* Service Key */
 //		urlBuilder.append(
-//				"&" + URLEncoder.encode("targetDt", "UTF-8") + "=" + targetDt); /* 寃��깋�븷 �궇吏� 議고쉶(�떦�씪�� 議고쉶媛� �븞�릺誘�濡� �븯猷� �쟾�쑝濡� 議고쉶) */
+//				"&" + URLEncoder.encode("targetDt", "UTF-8") + "=" + targetDt);
 //		URL url = new URL(urlBuilder.toString());
 //		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 //		conn.setRequestMethod("GET");
