@@ -32,6 +32,7 @@
 >JAVA 8 / SPRING BOOT / OPEN API(네이버 지도, 공공데이터 포털)  
 >  
 >[프로젝트 상세 설명](https://github.com/Altudy/chang-rok/tree/master/Project/pjt_bus_pos) 참고
+> README.md 작성중
 
 ---
 
@@ -45,6 +46,7 @@
 
 >  
 >[프로젝트 상세 설명](https://github.com/Altudy/chang-rok/tree/master/Project/pjt_vanillaJS_chrome_app) 참고
+>> README.md 작성중
 
 ---
 
@@ -56,6 +58,7 @@
 >JAVA 8 / SPRING / MySQL / GIT / JSP  
 >  
 >[프로젝트 상세 설명](https://github.com/Altudy/chang-rok/tree/master/Project/pjt_reservation) 참고
+> README.md 작성중
 
 ---
 
