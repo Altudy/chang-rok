@@ -1,79 +1,104 @@
+# :pushpin: 전시 정보 예약 관리 시스템
+> 관심 있는 컨텐츠의 정보를 확인하고 예약하는 예약 관리 시스템  
+>  
 
----
+</br>
 
-**AWS 기반의 전시 정보 예약 관리 플랫폼**
+## 1. 제작 기간 & 참여 인원
+- 2020.07 ~ 2020.11
+- 팀 프로젝트(2명)
 
-**AWS**
-```
-1. EC2에 instance를 생성 후, spring project를 배포했습니다.
-2. rds 서비스를 통해 mysql을 생성했습니다.
-```
+</br>
 
-**Spring Framework**
-```
-1. 로그인 페이지
-2. 메인 페이지
-3. 상세 페이지
-4. 예매 페이지
-5. 예매확인 페이지
-6. 한줄평 페이지
-```
+## 2. 사용 기술
+#### `Back-end`
+  - Java 8
+  - Spring 5.2
+  - GIT
+  - MySQL
+#### `Front-end`
+  - JSP
 
-**로그인 페이지**
-```
-1. Spring security를 이용하여 로그인 페이지 구성했습니다.
-2. 중복체크 버튼을 만들어 아이디의 중복여부 확인 가능합니다.
-3. 아이디와 전화번호는 올바른 형식을 입력하지 않으면 경고창이 발생합니다.
-4. 비밀번호는 database에 암호화하여 저장되기 때문에 관리자라고 하더라도 복호화할 수 없어 보안 유지 가능합니다.
-5. 라인토큰받기를 통해 일련의 절차를 거친 후 토큰을 받을 수 있습니다. ( 필수항목 아님 )
-5-1. 토큰을 입력하게 되면 예매를 했을 때 Line 앱으로 알림을 받을 수 있습니다.
-6. 로그인 실패시 실패창으로 이동하게 됩니다.
-```
+</br>
 
-**메인 페이지**
-```
-1. 프로모션 영역은 css의 keyframe 속성을 통해 자동슬라이드 형식으로 구성했습니다.
-2. 카테고리 영역과 개수는 ajax통신을 통해 페이지가 로드될 때 데이터를 가져옵니다.
-3. 카테고리 클릭시 관련 전시정보를 보여줍니다.
-```
+## 3. ERD 설계
+![image](https://user-images.githubusercontent.com/56072258/163819378-2f98e034-e3bd-4731-9f85-6e8091e8cbe0.png)
 
-**상세 페이지**
-```
-1. 해당 전시에 대한 정보를 상세히 알려주는 페이지입니다.
-2. 예매자 한줄평과 별점을 볼 수 있습니다.
-2-1. 한줄평이 4개 이상이면 예매자 한줄평 더보기 버튼이 활성화 됩니다.
-```
 
-**예매 페이지**
-```
-1. 수량, 예매자 정보, 이용자 약관 전체동의를 모두 완료해야 예약하기 버튼이 활성화됩니다. ( 수량이 0 일 경우는 안됨 )
-2. 예매자 정보는 올바른 형식을 입력하지 않으면 경고창이 발생합니다.
-3. 예약에 성공하면 Line 앱으로 알림이 갑니다.(회원가입시, 라인토큰 입력한 경우에만)
-4. 예약에 성공하면 예매확인 페이지로 redirect됩니다.
-```
+## 4. 핵심 기능
+이 서비스의 핵심 기능은 전시 예매 기능입니다.  
+사용자는 관심있는 전시와 선택하고 예매자 정보를 입력하여 예매를 할 수 있습니다.
+또한, 예매한 내역을 확인할 수 있습니다.
 
-**예매확인 페이지**
-```
-1. 예약자 이메일을 입력하면 예매 정보를 확인할 수 있습니다.
-2. 취소 버튼을 누르면 취소여부를 한번 더 확인하게 되고 '예' 버튼을 누를시 예약이 취소되면서 화면에서 사라집니다.
-3. 예매자 리뷰 남기기 버튼을 누르면 상세페이지에 있는 예매자 한줄평을 남길 수 있는 페이지로 이동합니다.
-```
+<details>
+<summary><b>핵심 기능 설명 펼치기</b></summary>
+<div markdown="1">
 
-**한줄평 페이지**
-```
-1. 별점과 코멘트를 남길 수 있고 사진을 첨부할 수 있습니다.(사진 첨부는 multipart를 이용)
-2. 리뷰 등록 완료 후, 상세페이지에서 한줄평이 추가 된 것을 확인할 수 있습니다.
-```
+### 4.1. 전체 흐름
+![image](https://user-images.githubusercontent.com/56072258/163830711-e14b6be1-03d7-4a55-a693-73d6191b8788.png)
 
-**문제점 & 개선할 부분**
-```
-**문제점**
-1. 로그인할 때, 로그인 정보를 Session에 담아 유지하지 못했음.
-2. 1의 결과로 예매자 정보 입력시 예매자 이메일을 수동으로 입력해야하는 불편함 발생.
-2-1. 예매자 이메일에 회원가입 안된 이메일 입력시 예매가 안됨.
-**개선방안**
-1. 로그인과 비회원 로그인으로 나누어 플랫폼 운영
-1-1. 비회원 로그인은 예매확인 절차만 가능, 예매는 x
-```
+### 4.2. Controller
+![image](https://user-images.githubusercontent.com/56072258/163827537-e6fd221e-d6c7-45c9-98f5-5b7c73117e14.png)
 
-※위 프로젝트는 '최승재' 군과 협업하여 진행한 프로젝트입니다.
+- **상세 화면으로 이동** :pushpin: [코드 확인](https://github.com/Altudy/chang-rok/blob/master/Project/pjt_reservation/reservation/src/main/java/kr/or/connect/reservation/controller/DetailController.java)
+  - 전시id를 파라미터로 하여 get 방식으로 호출합니다.
+  - 전시 정보에 관한 데이터를 model에 담아 detail view name을 반환합니다.
+  
+- **예매 화면으로 이동** :pushpin: [코드 확인](https://github.com/Altudy/chang-rok/blob/master/Project/pjt_reservation/reservation/src/main/java/kr/or/connect/reservation/controller/ReserveController.java)
+  - 전시id를 파라미터로 하여 get 방식으로 호출합니다.
+  - 전시 정보와 예매에 관련된 데이터를 model에 담아 reserve view name을 반환합니다.
+
+### 4.3. Repository
+![image](https://user-images.githubusercontent.com/56072258/163829639-9f88ce47-5de0-4089-8d84-bdf83ee1ac21.png)
+![image](https://user-images.githubusercontent.com/56072258/163830565-c5451cc2-163c-4945-853b-2a8b0d7c5ea5.png)
+  
+- **예매 진행** :pushpin: [코드 확인](https://github.com/Altudy/chang-rok/blob/master/Project/pjt_reservation/reservation/src/main/java/kr/or/connect/reservation/dao/ReservationDao.java)
+  - Reservation_info 테이블에 예매 정보를 insert한 후 id값을 리턴 받습니다.
+  - Reservation_info_price 테이블에 예매한 가격 정보를 insert 합니다.
+
+### 4.4. Sqls & DB
+
+![image](https://user-images.githubusercontent.com/56072258/163831996-b0521b18-afef-45ba-a6a3-8eb1274e0c14.png)
+
+- **Jdbc Template을 이용하여 DB 연결** :pushpin: [코드 확인](https://github.com/Altudy/chang-rok/blob/master/Project/pjt_reservation/reservation/src/main/java/kr/or/connect/reservation/dao/ReservationDao.java)
+  - Jdbc Template 이외에 <b>NamedParameterJdbcTemplate</b>, <b>SimpleJdbcInsert</b>, <b>SimpleJdbcTemplate</b> 을 이용하여 select, insert 구문을 실행했습니다.
+  - <b>NamedParameterJdbcTemplate</b>를 이용할 경우 Sql 파일을 따로 만들어 관리했습니다. [코드확인](https://github.com/Altudy/chang-rok/blob/master/Project/pjt_reservation/reservation/src/main/java/kr/or/connect/reservation/dao/ReservationDaoSqls.java)
+
+</div>
+</details>
+
+</br>
+
+## 5. 핵심 트러블 슈팅
+### 5.1. OPEN API 필수데이터 부재 문제
+- 처음에는 현재 영화 상영 목록을 Kobis에서 제공하는 API를 통해 불러오려고 했습니다.
+- 하지만 이용하려는 API에 영화 이미지 정보가 들어 있지 않다는 점과 화면 구성에 필요한 데이터를 조회하기 위해 2번의 API call로 페이지 로딩 속도 이슈가 있는 점이 불편했습니다.
+- 또한, 주기적으로 현재 상영 목록 데이터를 불러와 DB에 INSERT 해줘야 한다는 점이 불편했습니다.
+
+- 그래서 해결책을 찾던 중, 웹 크롤링에 대해 알게 되었고 CGV의 현재 상영 페이지에 있는 영화목록을 불러오도록 해결했습니다.
+
+<details>
+<summary><b>기존 코드</b></summary>
+<div markdown="1">
+
+![image](https://user-images.githubusercontent.com/56072258/163365811-d199a976-9a37-4020-8174-0cb930b4b45a.png)
+	
+:pushpin: [코드 확인](https://github.com/Altudy/chang-rok/blob/master/Project/pjt_Movie/1210kp/src/main/java/com/kdis/demo/controller/TicketingAPIController.java)
+
+</div>
+</details>
+
+<details>
+<summary><b>웹 크롤링 적용 코드</b></summary>
+<div markdown="1">
+
+![image](https://user-images.githubusercontent.com/56072258/163366710-b9a21a17-79f2-4e41-955e-2144e8bc243d.png)
+	
+:pushpin: [코드 확인](https://github.com/Altudy/chang-rok/blob/master/Project/pjt_Movie/1210kp/src/main/java/com/kdis/demo/controller/CGVCrwalingController.java)	
+
+</div>
+</details>
+
+</br>
+
+## 6. 회고 / 느낀점
