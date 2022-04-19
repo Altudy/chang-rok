@@ -70,34 +70,13 @@
 </br>
 
 ## 5. 핵심 트러블 슈팅
-### 5.1. OPEN API 필수데이터 부재 문제
-- 처음에는 현재 영화 상영 목록을 Kobis에서 제공하는 API를 통해 불러오려고 했습니다.
-- 하지만 이용하려는 API에 영화 이미지 정보가 들어 있지 않다는 점과 화면 구성에 필요한 데이터를 조회하기 위해 2번의 API call로 페이지 로딩 속도 이슈가 있는 점이 불편했습니다.
-- 또한, 주기적으로 현재 상영 목록 데이터를 불러와 DB에 INSERT 해줘야 한다는 점이 불편했습니다.
+### 5.1. 잦은 DB의 수정
+- 페이지 단위로 역할을 분담하여 코드를 작성하다보니 팀원과 서로 같은 테이블을 빈번하게 수정하는 일이 잦았습니다.
+- GIT을 통해 merge하는 과정에서 변수명을 수정하거나 중복되는 칼럼을 수정하는 등 효율이 매우 떨어졌습니다.
+- 역할을 분담하기 전에 DB의 테이블을 먼저 정하지 않아서 생긴 문제라고 생각했고 작업 진행 중에 ERD를 작성하는 것이 급선무라고 생각했습니다.
 
-- 그래서 해결책을 찾던 중, 웹 크롤링에 대해 알게 되었고 CGV의 현재 상영 페이지에 있는 영화목록을 불러오도록 해결했습니다.
-
-<details>
-<summary><b>기존 코드</b></summary>
-<div markdown="1">
-
-![image](https://user-images.githubusercontent.com/56072258/163365811-d199a976-9a37-4020-8174-0cb930b4b45a.png)
-	
-:pushpin: [코드 확인](https://github.com/Altudy/chang-rok/blob/master/Project/pjt_Movie/1210kp/src/main/java/com/kdis/demo/controller/TicketingAPIController.java)
-
-</div>
-</details>
-
-<details>
-<summary><b>웹 크롤링 적용 코드</b></summary>
-<div markdown="1">
-
-![image](https://user-images.githubusercontent.com/56072258/163366710-b9a21a17-79f2-4e41-955e-2144e8bc243d.png)
-	
-:pushpin: [코드 확인](https://github.com/Altudy/chang-rok/blob/master/Project/pjt_Movie/1210kp/src/main/java/com/kdis/demo/controller/CGVCrwalingController.java)	
-
-</div>
-</details>
+- ERD 작성 후 가장 좋았던 점은 시각적인 부분이었습니다. 머리 속으로 구상하던 테이블과의 관계성을 직접 의논하고 그려보면서 CRUD의 주체를 명확히 할 수 있었습니다.
+- 이러한 경험을 통해 프로젝트 시작 전 백엔드 개발자로서 DB 모델링 과정의 중요성을 배울 수 있었습니다.
 
 </br>
 
