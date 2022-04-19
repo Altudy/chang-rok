@@ -61,7 +61,6 @@
 >  
 >[프로젝트 상세 설명](https://github.com/Altudy/chang-rok/tree/master/Project/pjt_reservation) 참고
 >
-> README.md 작성중
 
 ---
 
