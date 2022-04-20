@@ -33,26 +33,10 @@
 >  
 >[프로젝트 상세 설명](https://github.com/Altudy/chang-rok/tree/master/Project/pjt_bus_pos) 참고
 >
-> README.md 작성중
 
 ---
 
-### 2. [Google Chrome의 Momentum 만들기](https://github.com/Altudy/chang-rok/tree/master/Project/pjt_vanillaJS_chrome_app)
->Google Chrome의 Momentum 만들기  (개인 프로젝트)  
->개발 기간: 2020.12 ~ 2020.01
-
->  
->기술 스택:  
->JS
-
->  
->[프로젝트 상세 설명](https://github.com/Altudy/chang-rok/tree/master/Project/pjt_vanillaJS_chrome_app) 참고
->
->  README.md 작성중
-
----
-
-### 3. [전시 정보 예약 관리 시스템](https://github.com/Altudy/chang-rok/tree/master/Project/pjt_reservation)
+### 2. [전시 정보 예약 관리 시스템](https://github.com/Altudy/chang-rok/tree/master/Project/pjt_reservation)
 >관심 있는 컨텐츠의 정보를 확인하고 예약하는 예약 관리 시스템  (졸업작품 프로젝트)  
 >개발 기간: 2020.07 ~ 2020.11  
 >  
@@ -64,7 +48,7 @@
 
 ---
 
-### 4. [영화 사이트 제작](https://github.com/Altudy/chang-rok/tree/master/Project/pjt_Movie)
+### 3. [영화 사이트 제작](https://github.com/Altudy/chang-rok/tree/master/Project/pjt_Movie)
 >CGV와 유사한 영화 예매 사이트  (팀 프로젝트)  
 >개발 기간: 2020.01 ~ 2020.12
 
